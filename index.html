@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Review this part and modify it to your liking -->
+    <meta name="description" content="Sample text for portfolio template meta tag">
+    <meta name="keywords" content="Sample text for portfolio template meta tag">
+    <meta name="author" content="Sample text for portfolio template meta tag">
+    <title>My portfolio website</title>
+    <!-- Adding favicon for older and modern browsers,
+        It is best to add favicon to the main folder, 
+        I used an only ico converter for best result,
+        Do not forget to clear you cache to see the changes -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- font for the quote -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <!-- font for the body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- font for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav class="sticky">
+        <label for="drop" class="toggle" id="main-toggle">
+            <span class="nav-icon"></span>
+        </label>
+        <input type="checkbox" id="drop">
+            <ul class="main-nav">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about-me.html">À propos de moi</a></li>
+                <li><a href="skill-set.html">Compétences</a></li>
+                <li><a href="portfolio.html">Mes projets</a></li>
+                <li><a href="#contact-me">Contactez-moi</a></li>
+            </ul>
+    </nav>
+
+    <!-- introduction -->
+    <header class="grid-system-2 w-900 padding">
+        <section class="align-center">
+            <h1 class="medium-spacing">Salut, je suis</h1>
+            <h1 class="large">Dionisio HEBO</h1>
+            <p class="justify">Étudiant en deuxième de Génie Electrique et Informatique Industrielle à l'IUT de Bordeaux dans le 
+                parcours d'Électronique et Systèmes Embarqués.</p>
+        </section>
+        <section class="center align-center">
+            <img class="header-img max-width max-height" src="assets/profile-picture.jpg" alt="profile-picture">
+
+        </section>
+    </header>
+
+    <!-- CV Section -->
+    <section class="w-900 padding center">
+        <h2 class="main-title center padding">Curriculum Vitae</h2>
+        <p class="justify center">Téléchargez ou consultez mon CV pour en savoir plus sur mon parcours professionnel et académique.</p>
+        <section class="padding-top" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="assets/cv_dionisio.pdf" download class="button-outline" target="_blank">Télécharger CV (PDF)</a>
+            <a href="assets/cv_dionisio.pdf" class="button-outline" target="_blank">Voir CV</a>
+        </section>
+    </section>
+
+    <!-- quote -->
+    <article class="baby-pink">
+        <p>Les systèmes embarqués transforment la technologie invisible en expériences réelles.</p>
+
+    </article>
+
+    <!-- about me -->
+    <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
+    <section class="wrapper">
+        <section class="margin-auto">
+            <img class="max-width max-height" src="assets/about_me2.png" alt="about-me-logo">
+            
+
+        </section>
+        <section class="justify align-center">
+            <p class="bold">À propos de moi</p>
+            <p></p>
+            <p>Étudiant en Génie Électrique et Informatique Industrielle à l'IUT de Bordeaux, 
+                je suis passionné par la conception et le développement de solutions innovantes alliant électronique et informatique industrielle. 
+                Curieux et déterminé, je cherche constamment à approfondir mes connaissances à travers des projets pratiques et des défis techniques. 
+                Mon objectif est de transformer mes compétences en contributions concrètes dans un environnement professionnel exigeant.</p>
+            <p> </p>
+            <p class="padding-top"><a href="about-me.html" class="button-outline">Plus d'info</a></p>
+        </section>
+    </section>
+
+    <!-- skills -->
+    <!-- use this to showcase your skills, if you make changes, do not forget to modify the css accordingly -->
+    <section>
+        <h3 class="main-title center" style="padding: 20px 20px 0px 20px;">Savoir</h3>
+    </section>
+    <section class="wrapper">
+        <section class="column">
+            <p class="main-title center">Faire</p>
+            <section class="skills">
+                <ul class="no-bullet-list no-padding-list-item">
+                    <li>
+                        <p>Conception des cartes électroniques</p>
+                        <span class="progress-bar"><span class="html"></span></span>
+                    </li>
+                    <li>
+                        <p>Python</p>
+                        <span class="progress-bar"><span class="css"></span></span>
+                    </li>
+                    <li>
+                        <p>Simulation de circuits</p>
+                        <span class="progress-bar"><span class="javascript"></span></span>
+                    </li>
+                    <li>
+                        <p>Suite Protheus</p>
+                        <span class="progress-bar"><span class="php"></span></span>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section class="column">
+            <p class="main-title center">Être</p>
+            <section class="skills">
+                <ul class="no-bullet-list no-padding-list-item">
+                    <li>
+                        <p>Communication et adaptabilité</p>
+                        <span class="progress-bar"><span class="comm-adapt"></span></span>
+                    </li>
+                    <li>
+                        <p>Travail en équipe</p>
+                        <span class="progress-bar"><span class="team-player"></span></span>
+                    </li>
+                    <li>
+                        <p>Résolution de problèmes</p>
+                        <span class="progress-bar"><span class="problem-solving"></span></span>
+                    </li>
+                    <li>
+                        <p>Ouvert d'esprit</p>
+                        <span class="progress-bar"><span class="open-minded"></span></span>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </section>
+    </section>
+
+    <!-- Projects -->
+    <!-- If you have more projects you are working on at the moment, or just want to show more, double the whole section below without the title and you are good to go -->
+    <section>
+        <h3 class="main-title center padding">Projets sur lesquels je travaille actuellement</h3>
+    </section>
+    <section class="w-900 padding">
+        <section class="card justify flex margin-auto" style="max-width: 500px;">
+            <img class="box" src="assets/Sumo ISO 01.png" alt="project1">
+            <p class="padding bold center">Robot Sumo</p>
+            <p>Développement d’un robot autonome capable de détecter un adversaire, 
+                d’adapter son comportement et de se déplacer de manière entièrement indépendante sur l’aire de combat. 
+                Le projet suit une démarche complète d’ingénierie : analyse des besoins, conception, assemblage, tests et validation. 
+                Avec mon équipe, je gère également la planification, le budget et la documentation afin de respecter les contraintes de taille, de masse, 
+                d’autonomie et de fonctionnement imposées. 
+                Ce projet me permet de mettre en pratique, en conditions réelles, mes compétences en électronique, programmation, capteurs et gestion de projet.</p>
+            <p></p>
+            <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Portfolio</a></p>
+        </section>
+    </section>
+
+    <!-- contact me -->
+    <!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
+    <section id="contact-me" class="grid-system-2 w-900 padding">
+        <section class="margin-auto">
+            <img class="max-width max-height" src="assets/contact-me.png" alt="contact-me-illustration">
+        </section>
+        <section class="margin-auto align-center">
+            <h1 class="medium-spacing center">Contactez-moi<span></span></h1>
+            <section class="box-contact margin-auto padding-top">
+                <span>
+                    <a href="https://www.linkedin.com/in/dionísio-hebo-2b168b335?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank"><img class="logo" src="assets/linkedin.png"
+                            alt=""></a>
+                </span>             
+                <span>
+                    <a href="mailto:dionisiohebo7@gmail.com"><img class="logo" src="assets/email.png" alt="Enviar E-mail para dionisiohebo7@gmail.com"></a>
+                </span>
+            </section>
+        </section>
+    </section>
+
+    <!-- special thanks -->
+    <!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
+    <section>
+        <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
+            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> by
+            Storyset
+
+        </p>
+        <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,
+                </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font
+                    awesome, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"
+                    target="_blank">microsoft, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is
+                    indurstries, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="https://www.linkedin.com/in/dion%C3%ADsio-hebo-2b168b335/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3ByvWmmAwUReOf152JsvWK%2Fw%3D%3D">kalash
+                </a></span>
+            on Iconfinder
+        </p>
+    </section>
+
+    <!-- footer -->
+    <!-- waits for you to take over! -->
+    <footer>@dionisiohebo7</footer>
+</body>
+
+</html>
