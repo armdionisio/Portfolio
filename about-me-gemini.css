@@ -1,0 +1,55 @@
+/* Conteneur principal */
+.presentation-container {
+    width: 90%;
+    max-width: 900px; /* Largeur maximale, comme dans votre code original */
+    margin: 40px auto; /* Centre le bloc sur la page */
+    padding: 20px;
+}
+
+/* 1. Titre centré */
+.presentation-title {
+    text-align: center;
+    font-size: 2.5em; /* Taille du titre */
+    margin-bottom: 30px; /* Espace sous le titre */
+}
+
+/* 2. Conteneur Flex pour aligner l'image et le texte */
+.presentation-content {
+    display: flex;
+    align-items: flex-start; /* Aligne les éléments en haut */
+    gap: 40px; /* Espace entre l'image et le texte */
+    justify-content: center; /* Centre les deux blocs s'ils prennent moins de place */
+}
+
+/* 3. Conteneur de l'image (à gauche) */
+.image-wrapper {
+    flex-shrink: 0; /* Empêche l'image de rétrécir */
+    width: 200px; /* Taille fixe pour le conteneur de l'image */
+    height: 200px;
+}
+
+/* Style de l'image ronde */
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Rend l'image parfaitement ronde */
+    object-fit: cover; /* Assure que l'image remplit le cercle sans être déformée */
+}
+
+/* 4. Conteneur du texte (à droite) */
+.text-wrapper {
+    flex-grow: 1; /* Permet au texte de prendre l'espace restant */
+    max-width: 600px; /* Limite la largeur du texte */
+}
+
+/* Style de la liste */
+.text-wrapper ul {
+    list-style-type: disc;
+    padding-left: 20px; /* Indentation standard pour les puces */
+    margin: 0; /* Réinitialise la marge */
+}
+
+.text-wrapper li {
+    margin-bottom: 10px; /* Espace entre chaque point */
+    line-height: 1.5; /* Meilleure lisibilité */
+}

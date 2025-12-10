@@ -173,6 +173,11 @@ body {
     padding-top: 20px;
 }
 
+.spaced-text{
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
 .padding-right{
     padding-right: 20px;
 }
@@ -374,6 +379,7 @@ footer{
     list-style: none;
     text-transform: uppercase;
 }
+
 
 .progress-bar {
     background-color: #353b48;

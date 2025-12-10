@@ -1,3 +1,27 @@
+/* Alinhamento das imagens com os textos (parágrafos, não títulos) */
+.grid-system-2 {
+    align-items: start;
+}
+
+.portfolio-image-1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* Alinha a imagem com o primeiro parágrafo */
+    /* Compensa: padding-top do título (20px) + altura aproximada do título (1.5rem) */
+    margin-top: 0;
+    padding-top: calc(20px + 5rem);
+}
+
+.portfolio-image-2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* Alinha a imagem com o primeiro parágrafo */
+    /* Compensa: padding-top do título (20px) + altura aproximada do título (1.5rem) */
+    margin-top: 0;
+    padding-top: calc(20px + 3rem);
+}
 /* MEDIA OVERWRITE AND NEW SETTINGS */
 @media screen and (max-width: 950px){
     .main-title{

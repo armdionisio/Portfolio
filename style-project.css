@@ -8,6 +8,11 @@
     background-color: rgba(243, 162, 200, 0.3);
 }
 
+.spaced-text {
+    line-height: 1.8;      /* mais espaço entre linhas */
+    margin-bottom: 20px;   /* espaço abaixo do parágrafo */
+}
+
 /* DARK THEME */
 @media (prefers-color-scheme: dark) {
     @media screen and (max-width: 929px) {
