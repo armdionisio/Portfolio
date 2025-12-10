@@ -395,58 +395,59 @@ footer{
     border-radius: 20px;
     -webkit-background: linear-gradient(135deg, rgb(65, 105, 225) 0%, rgb(100, 149, 237) 60%);
     -webkit-border-radius: 20px;
+    transition: width 0.3s ease;
 }
 
-.html {
-    width: 90%;
-    animation: html 3s;
+.f1 {
+    width: 60%;
+    animation: f1 3s ease;
 }
 
-.css {
+.f2 {
     width: 75%;
-    animation: css 3s;
+    animation: f2 3s ease;
 }
 
-.javascript {
+.f3 {
     width: 63%;
-    animation: javascript 3s;
+    animation: f3 3s ease;
 }
 
-.php {
+.f4 {
     width: 54%;
-    animation: php 3s;
+    animation: f4 3s ease;
 }
 
-.comm-adapt {
-    width: 90%;
-    animation: comm-adapt 3s;
+.e1 {
+    width: 70%;
+    animation: e1 3s ease;
 }
 
-.team-player {
-    width: 85%;
-    animation: team-player 3s;
+.e2 {
+    width: 65%;
+    animation: e2 3s ease;
 }
 
-.problem-solving {
+.e3{
     width: 82%;
-    animation: problem-solving 3s;
+    animation: e3 3s ease;
 }
 
-.open-minded {
+.e4 {
     width: 75%;
-    animation: open-minded 3s;
+    animation: e4 3s ease;
 }
 
-@keyframes html {
+@keyframes f1 {
     0% {
         width: 0%;
     }
     100% {
-        width: 90%;
+        width: 60%;
     }
 }
 
-@keyframes css {
+@keyframes f2 {
     0% {
         width: 0%;
     }
@@ -455,7 +456,7 @@ footer{
     }
 }
 
-@keyframes javascript {
+@keyframes f3 {
     0% {
         width: 0%;
     }
@@ -464,7 +465,7 @@ footer{
     }
 }
 
-@keyframes php {
+@keyframes f4 {
     0% {
         width: 0%;
     }
@@ -473,25 +474,25 @@ footer{
     }
 }
 
-@keyframes comm-adapt {
+@keyframes e1 {
     0% {
         width: 0%;
     }
     100% {
-        width: 90%;
+        width: 70%;
     }
 }
 
-@keyframes team-player {
+@keyframes e2 {
     0% {
         width: 0%;
     }
     100% {
-        width: 85%;
+        width: 65%;
     }
 }
 
-@keyframes problem-solving {
+@keyframes e3 {
     0% {
         width: 0%;
     }
@@ -500,7 +501,7 @@ footer{
     }
 }
 
-@keyframes open-minded {
+@keyframes e4 {
     0% {
         width: 0%;
     }
