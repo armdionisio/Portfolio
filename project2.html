@@ -1,83 +1,126 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Review this part and modify it to your liking -->
-    <meta name="description" content="Sample text for portfolio template meta tag">
-    <meta name="keywords" content="Sample text for portfolio template meta tag">
-    <meta name="author" content="Sample text for portfolio template meta tag">
-    <title>Project2</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style-project.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dossier technique du projet Informatique Industrielle avec Raspberry Pi et bras robotique.">
+  <title>Dionísio Hebo - Informatique Industrielle</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Montserrat:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
-        <label for="drop" class="toggle" id="main-toggle">
-            <span class="nav-icon"></span>
-        </label>
-        <input type="checkbox" id="drop">
-        <ul class="main-nav">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="about-me.html">À propos de moi</a></li>
-            <li><a href="skill-set.html">Compétences</a></li>
-            <li><a href="portfolio.html">Mes projets</a></li>
-            <li><a href="index.html#contact-me">Contactez-moi</a></li>
-        </ul>
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+      <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+      <div class="nav-links" data-nav>
+        <a href="index.html">Accueil</a>
+        <a href="about-me.html">Profil</a>
+        <a href="skill-set.html">Compétences</a>
+        <a class="active" href="portfolio.html">Projets</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- project name -->
-    <section class="w-900 padding center">
-        <h2 class="medium-spacing-halfsize">Bras robotique</h2>
-        <p class="center italic">Controle d'un bras robotique connecté à une carte Raspbery</p>
-    </section>
+  <main class="section">
+    <div class="container detail-layout">
+      <aside class="surface sidebar">
+        <span class="eyebrow">Projet 02</span>
+        <h2 style="margin-top:14px;">Informatique Industrielle</h2>
+        <p class="muted" style="margin-top:14px;">Commande d’un bras robotique à partir d’une Raspberry Pi avec développement en C, communication série et pilotage de servomoteurs.</p>
+        <div class="chip-stack" style="margin-top:18px;">
+          <span class="chip">Raspberry Pi</span>
+          <span class="chip">GPIO</span>
+          <span class="chip">USB-RS232</span>
+          <span class="chip">pigpio</span>
+        </div>
+        <nav class="side-nav">
+          <a data-section-link href="#synthese">Synthèse</a>
+          <a data-section-link href="#gpio">GPIO et initialisation</a>
+          <a data-section-link href="#serie">Communication série</a>
+          <a data-section-link href="#application">Application C</a>
+          <a data-section-link href="#servos">Commande des servos</a>
+          <a data-section-link href="#prehenseur">Position du préhenseur</a>
+        </nav>
+        <div class="contact-links" style="margin-top:18px;">
+          <a class="button-outline" href="assets/HEBO_B1b_Info_Indus%20(1).pdf" target="_blank">Ouvrir le rapport</a>
+        </div>
+      </aside>
 
-
-<section class="w-900 padding">
-    <p class="spaced-text">
-        Dans ce projet d’Informatique Industrielle, j’ai développé une application complète permettant de contrôler un 
-        bras robotique à l’aide d’une Raspberry Pi programmée en C. J’ai commencé par gérer l’accès direct aux 
-        entrées/sorties de la carte, avant de mettre en place une communication série fiable entre la Raspberry Pi et un ordinateur.
-        J’ai ensuite programmé le pilotage des servomoteurs, conçu une structure capable d’interpréter des trames et de mapper 
-        correctement les valeurs reçues vers des positions réelles du robot. Enfin, j’ai intégré des données externes issues 
-        d’un fichier CSV afin de contrôler précisément la position du préhenseur.
-        Ce projet m’a permis de maîtriser la programmation bas niveau, l’électronique embarquée et la communication série, 
-        tout en aboutissant à une application fonctionnelle capable de commander l’ensemble des articulations du bras robotique.
-    </p>
-</section>
-   
-    <section class="w-900 padding center">
-        <h2 class="main-title center padding">Rapport du travail pratique</h2>
-        <p class="justify center spaced-text">Téléchargez ou consultez mon rapport résultat de ce travail pratique</p>
-        <section class="padding-top" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <a href="assets/HEBO_B1b_Info_Indus (1).pdf" download class="button-outline" target="_blank">Télécharger le rapport</a>
-            <a href="assets/HEBO_B1b_Info_Indus (1).pdf" class="button-outline" target="_blank">Voir rapport</a>
+      <div class="detail-content">
+        <section class="detail-section surface" id="synthese" data-section>
+          <span class="eyebrow">Synthèse</span>
+          <h1 style="margin-top:14px;">Objectif du travail pratique</h1>
+          <p class="muted" style="margin-top:16px;">Le rapport présente une progression claire : accéder aux ports de la Raspberry Pi, établir une communication série avec un PC, développer des applications en C, commander les servomoteurs du bras robotique puis transmettre des commandes paramétrées pour positionner le préhenseur.</p>
+          <div class="kpi-grid" style="margin-top:18px;">
+            <div class="kpi"><span class="label">TP</span><strong>1 à 7</strong></div>
+            <div class="kpi"><span class="label">Langage</span><strong>C</strong></div>
+            <div class="kpi"><span class="label">Fonction</span><strong>Commande robot</strong></div>
+          </div>
         </section>
-    </section>
 
-    <p class="wrapper justify-content"><a href="portfolio.html" class="link-no-scale colorful-letter">Back to portfolio</a></p>
+        <section class="detail-section surface" id="gpio" data-section>
+          <span class="eyebrow">TP1</span>
+          <h3>Accès aux entrées/sorties et séquence d’initialisation</h3>
+          <ul>
+            <li>Définition explicite des broches d’activation et de signal des servomoteurs.</li>
+            <li>Initialisation des GPIO par la librairie pigpio et configuration des sorties.</li>
+            <li>Mise en position initiale du bras avant lecture d’une consigne utilisateur.</li>
+            <li>Commande de plusieurs mouvements conditionnés par la valeur d’une variable de choix.</li>
+          </ul>
+          <div class="code-box mono" style="margin-top:16px;">gpioInitialise() -> gpioSetMode() -> gpioWrite() -> gpioServo()</div>
+        </section>
 
-    <!-- footer -->
-    <footer>@dionisiohebo7</footer>
+        <section class="detail-section surface" id="serie" data-section>
+          <span class="eyebrow">TP2</span>
+          <h3>Établissement de la liaison série</h3>
+          <ul>
+            <li>Connexion entre la Raspberry Pi et le PC Windows via un adaptateur USB/RS232.</li>
+            <li>Configuration du terminal Hterm à 19200 bit/s, 8 bits d’information, 1 bit de stop et sans parité.</li>
+            <li>Identification du port série sous Linux sous la forme /dev/ttyUSB0 et du port COM sous Windows.</li>
+            <li>Transmission de caractères et de valeurs entières pour vérifier la chaîne de communication.</li>
+          </ul>
+        </section>
+
+        <section class="detail-section surface" id="application" data-section>
+          <span class="eyebrow">TP3 - TP5</span>
+          <h3>Applications développées en C</h3>
+          <ul>
+            <li>Passage d’une communication réalisée au terminal à une communication gérée par une application dédiée en langage C.</li>
+            <li>Développement d’une application destinée à recevoir ou transmettre des données utiles au pilotage du bras.</li>
+            <li>Mise en place d’une transmission de commandes avec paramètres pour permettre une commande plus précise du système.</li>
+          </ul>
+        </section>
+
+        <section class="detail-section surface" id="servos" data-section>
+          <span class="eyebrow">TP4</span>
+          <h3>Commande des servomoteurs</h3>
+          <ul>
+            <li>Contrôle des servomoteurs de la base, de l’avant-bras et de la pince.</li>
+            <li>Utilisation de signaux de type servo pour imposer les positions successives.</li>
+            <li>Gestion de séquences temporelles avec temps d’attente pour rendre les mouvements exécutables.</li>
+          </ul>
+        </section>
+
+        <section class="detail-section surface" id="prehenseur" data-section>
+          <span class="eyebrow">TP6 - TP7</span>
+          <h3>Positionnement du préhenseur</h3>
+          <ul>
+            <li>Développement d’une logique de commande permettant de transmettre des consignes paramétrées au robot.</li>
+            <li>Commande de la position finale du préhenseur par ajustement des servomoteurs concernés.</li>
+            <li>Validation progressive du comportement attendu par essai, observation et ajustement logiciel.</li>
+          </ul>
+          <p class="muted" style="margin-top:16px;">Ce travail montre surtout la montée en complexité : partir d’un accès simple aux E/S puis arriver à une commande robotique plus structurée et paramétrable.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">@dionisiohebo7</footer>
+  <script src="app.js"></script>
 </body>
-
 </html>

@@ -1,119 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Review this part and modify it to your liking -->
-    <meta name="description" content="Sample text for portfolio template meta tag">
-    <meta name="keywords" content="Sample text for portfolio template meta tag">
-    <meta name="author" content="Sample text for portfolio template meta tag">
-    <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- This page benefits from the main css and also from the about-me css, that is why all 3 is linked -->
-    <link rel="stylesheet" type="text/css" href="style-about-me.css">
-    <link rel="stylesheet" type="text/css" href="style-portfolio.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projets techniques de Dionísio Hebo en électronique et systèmes embarqués.">
+  <title>Dionísio Hebo - Projets</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Montserrat:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
-        <label for="drop" class="toggle" id="main-toggle">
-            <span class="nav-icon"></span>
-        </label>
-        <input type="checkbox" id="drop">
-        <ul class="main-nav">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="about-me.html">À propos de moi</a></li>
-            <li><a href="skill-set.html">Compétences</a></li>
-            <li><a href="portfolio.html">Mes projets</a></li>
-            <li><a href="index.html#contact-me">Contactez-moi</a></li>
-        </ul>
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+      <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+      <div class="nav-links" data-nav>
+        <a href="index.html">Accueil</a>
+        <a href="about-me.html">Profil</a>
+        <a href="skill-set.html">Compétences</a>
+        <a class="active" href="portfolio.html">Projets</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- Use align center accordingly as it my center vertically the image or the text. Or if you do not want to use it at all, then just delete it -->
-    <!-- project1 
-     
-    Développement d'un robot autonome capable de détecter un adversaire, 
-                d'adapter son comportement et de se déplacer de manière entièrement indépendante sur l'aire de combat.
-    Le projet suit une démarche complète d'ingénierie : analyse des besoins, conception, assemblage, tests et validation.<           
-    Avec mon équipe, je gère également la planification, le budget et la documentation afin de respecter les contraintes de taille, de masse, 
-                d'autonomie et de fonctionnement imposées.            
-    Ce projet me permet de mettre en pratique, en conditions réelles, mes compétences en électronique, programmation, capteurs et gestion de projet.
-                -->
-    <section class="grid-system-2 w-900 padding" style="align-items: start;">
-        <section class="spaced-text">
-            <h3 class="main-title padding-top">Robot Sumo</h3>
-            
-            <p class="spaced-text">Développement d’un robot autonome capable de détecter un adversaire, d’adapter son comportement et de se déplacer de manière entièrement 
-                indépendante sur l’aire de combat. 
-            </p>
-            <p class="spaced-text">Le projet suit une démarche complète d’ingénierie : analyse des besoins, conception, assemblage, tests et validation. 
-                Avec mon équipe, je gère également la planification, le budget et la documentation afin de respecter les contraintes de taille, de masse, d’autonomie et de fonctionnement imposées. 
-                Ce projet me permet de mettre en pratique, en conditions réelles, mes compétences en électronique, programmation, capteurs et gestion de projet.</p>
-            </p>
-            <p class="spaced-text"></p> 
-            <p class="spaced-text"></p>
-            <p class="padding-top"><a href="project1.html" class="button-outline">Plus d'info</a></p>
-        </section>
-        <section class="portfolio-image-1">
-            <p><a href="project1.html"><img class="max-width" src="assets/Sumo ISO 01.png" alt="project1" style="max-width: 100%; height: auto;"></a></p>
-        </section>
-    </section>
-    <!-- project2 -->
-    <section class="grid-system-2 w-900 padding" style="align-items: start;">
-        <section class="spaced-text">
-            <h3 class="main-title padding-top">Control d'un bras robotique</h3>
-            <p class="spaced-text">Développement d’un système de contrôle d’un bras robotisé basé sur Raspberry Pi. Programmation en C pour la gestion des GPIO et des servomoteurs, 
-                et en Python pour la communication série via RS232/USB. Mise en place d’un protocole de trames avec ACK/NAK, transmission de commandes et contrôle précis par signaux PWM.</p>
-            <p class="spaced-text">Ce TP m'as appris des bases importantes pour la programmation embarquée.</p>
-           
-            
-            <p class="padding-top"><a href="project2.html" class="button-outline">Plus d'info</a></p>
-        </section>
-        <section class="portfolio-image-2">
-            <p><a href="project2.html"><img class="max-width" src="assets/bras_robot.jpg" alt="project2" style="max-width: 90%; height: auto;"></a></p>
-        </section>
-    </section>
+  <main class="section">
+    <div class="container surface" style="padding:32px;">
+      <span class="eyebrow">Projets</span>
+      <h1 style="margin-top:16px;">Dossiers techniques présentés</h1>
+      <p class="muted" style="margin-top:16px; max-width:72ch;">Cette page regroupe les projets qui servent de support principal aux preuves techniques du portfolio. Le niveau de détail est volontairement orienté vers l’architecture, la réalisation et la validation.</p>
+    </div>
 
-    <!-- project3 
-    <section class="grid-system-2 w-900 padding">
-        <section class="justify">
-            <h3 class="main-title padding-top">Project name</h3>
-            <p>Project details here.</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem quae inventore dignissimos,
-                ullam, molestiae veniam temporibus distinctio quis expedita dolor, suscipit alias. Nulla maxime
-                officiis nobis sed fugiat tenetur excepturi.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quae qui dolore architecto.
-                Ipsam quibusdam sit in ab corporis sapiente, non facere sint aspernatur ipsum ullam voluptatibus
-                necessitatibus aperiam nobis!</p>
-            
-            <p class="padding-top"><a href="project3.html" class="button-outline">More info</a></p>
-        </section>
-        <section class="center">
-            <p><a href="project3.html"><img class="max-width" src="assets/project3.png" alt="project3"></a>
-        </section>
-    </section>
--->
+    <div class="container section project-grid">
+      <article class="project-card card">
+        <img src="assets/Sumo ISO 01.png" alt="Robot Mini-Sumo">
+        <div class="project-body">
+          <span class="eyebrow">Projet 01</span>
+          <h2 style="margin-top:6px;">Robot Mini-Sumo</h2>
+          <p class="muted">Projet d’équipe centré sur la conception d’un robot autonome capable de détecter un adversaire, de repérer les limites du ring, de démarrer sur ordre infrarouge et d’assurer la propulsion conforme au cahier des charges.</p>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="label">Documents</span><strong>DDC + DDF</strong></div>
+            <div class="kpi"><span class="label">Traitement</span><strong>ATMEGA328P</strong></div>
+            <div class="kpi"><span class="label">Action</span><strong>Pont en H</strong></div>
+          </div>
+          <div class="timeline" style="margin-top:8px;">
+            <div class="timeline-item"><div class="tag">Analyse</div><div><h3>Architecture fonctionnelle</h3><p class="muted">Acquisition, traitement, action, énergie.</p></div></div>
+            <div class="timeline-item"><div class="tag">Réalisation</div><div><h3>Documents de fabrication</h3><p class="muted">Schéma, nomenclature, typons, perçage, implantation.</p></div></div>
+            <div class="timeline-item"><div class="tag">Validation</div><div><h3>Dérisquage et conformité</h3><p class="muted">Simulations et matrice de conformité.</p></div></div>
+          </div>
+          <div class="project-footer">
+            <a class="button" href="project1.html">Ouvrir le dossier</a>
+            <a class="button-outline" href="assets/B1_DDC_EQ12_V1.docx.pdf" target="_blank">DDC PDF</a>
+          </div>
+        </div>
+      </article>
 
-    <!-- footer -->
-    <footer>@dionisiohebo7</footer>
+      <article class="project-card card">
+        <img src="assets/bras_robot.jpg" alt="Bras robotique piloté par Raspberry Pi">
+        <div class="project-body">
+          <span class="eyebrow">Projet 02</span>
+          <h2 style="margin-top:6px;">Informatique Industrielle - Bras robotique</h2>
+          <p class="muted">Suite de travaux pratiques portant sur la commande d’un bras robotique depuis une Raspberry Pi, avec programmation en C, communication série, gestion des GPIO et pilotage de servomoteurs.</p>
+          <div class="kpi-grid">
+            <div class="kpi"><span class="label">Support</span><strong>Raspberry Pi</strong></div>
+            <div class="kpi"><span class="label">Logiciel</span><strong>C / pigpio</strong></div>
+            <div class="kpi"><span class="label">Liaison</span><strong>USB-RS232</strong></div>
+          </div>
+          <div class="timeline" style="margin-top:8px;">
+            <div class="timeline-item"><div class="tag">TP1-TP2</div><div><h3>GPIO et communication terminal</h3><p class="muted">Initialisation des E/S et échanges série entre PC et carte.</p></div></div>
+            <div class="timeline-item"><div class="tag">TP3-TP5</div><div><h3>Applications en C</h3><p class="muted">Réception, émission et transmission de commandes avec paramètres.</p></div></div>
+            <div class="timeline-item"><div class="tag">TP6-TP7</div><div><h3>Pilotage du préhenseur</h3><p class="muted">Commande de position des servomoteurs et séquences de mouvement.</p></div></div>
+          </div>
+          <div class="project-footer">
+            <a class="button" href="project2.html">Ouvrir le dossier</a>
+            <a class="button-outline" href="assets/HEBO_B1b_Info_Indus%20(1).pdf" target="_blank">Rapport PDF</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">@dionisiohebo7</footer>
+  <script src="app.js"></script>
 </body>
-
 </html>

@@ -1,147 +1,137 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Review this part and modify it to your liking -->
-    <meta name="description" content="Sample text for portfolio template meta tag">
-    <meta name="keywords" content="Sample text for portfolio template meta tag">
-    <meta name="author" content="Sample text for portfolio template meta tag">
-    <title>Robot Sumo</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style-project.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dossier technique du projet Robot Mini-Sumo de Dionísio Hebo.">
+  <title>Dionísio Hebo - Robot Mini-Sumo</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Montserrat:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
-        <label for="drop" class="toggle" id="main-toggle">
-            <span class="nav-icon"></span>
-        </label>
-        <input type="checkbox" id="drop">
-        <ul class="main-nav">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="about-me.html">À propos de moi</a></li>
-            <li><a href="skill-set.html">Compétences</a></li>
-            <li><a href="portfolio.html">Mes projets</a></li>
-            <li><a href="index.html#contact-me">Contactez-moi</a></li>
-        </ul>
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+      <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+      <div class="nav-links" data-nav>
+        <a href="index.html">Accueil</a>
+        <a href="about-me.html">Profil</a>
+        <a href="skill-set.html">Compétences</a>
+        <a class="active" href="portfolio.html">Projets</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- project name -->
-    <section class="w-900 padding center">
-        <h2 class="medium-spacing-halfsize">Robot Sumo</h2>
-        <p class="center italic"></p>
-    </section>
-
-    <!-- about this project -->
-    <section class="w-900 padding">
-        <p class="spaced-text">
-            Ce projet s'inscrit dans le développement complet d'un robot Mini-Sumo dans le cadre de mon SAÉ de deuxième année en GEII à l'IUT à Bordeaux. 
-            Le travail porte principalement sur la conception, l'assemblage et la programmation du robot, 
-            visant à créer une machine autonome capable de détecter et de combattre un adversaire dans une arène dédiée. 
-            Le robot doit respecter des contraintes strictes de taille (maximum 10 cm x 10 cm) et de poids (maximum 500 g), 
-            tout en intégrant des fonctionnalités avancées telles que la détection d'obstacles, la prise de décision en temps réel et la mobilité efficace.</p> 
-         <p class="spaced-text">   Mon rôle dans ce projet inclut la gestion de l'équipe, la planification des tâches, la gestion du budget, ainsi que la documentation complète du processus de développement. 
-            Ce projet me permet de mettre en pratique mes compétences en électronique, programmation embarquée, 
-            et gestion de projet, tout en travaillant en collaboration avec mes coéquipiers pour atteindre un objectif commun.     
-        </p>    
-        <p class="spaced-text">
-           J'ai travaillé sur la conception de l'étage d'acquisition des données, 
-           pour choisir les composants à utiliser au milieu des divers types des composants disponibles sur le marché,
-           j'ai commencé par lire les datasheets de plusieurs capteurs adaptés au projet,
-           j'ai ensuite fait une analyse comparative de ces capteurs en fonction de plusieurs critères tels que la précision, la portée, la consommation d'énergie et le coût. </p>
-          <p class="spaced-text"></p>
-           Je me suis servis des ces informations pour remplir une FAD (Fiche d'Aide à la Décision) qui m'a aidé à sélectionner les capteurs les plus appropriés pour le robot Sumo.
-           Finalement, j'ai intégré les capteurs sélectionnés dans le design global du robot : 
-           le capteur ultrasonique HC-SR04 pour la détection d'obstacles et le capteur réfléchissant CNY70 pour la détection de lignes et de bords, choisis pour leur simplicité d'intégration et leur bon rapport performance/coût.
-              
-        </p>
-        <p class="spaced-text">
-            En parallèle, j'ai développé le code embarqué pour le microcontrôleur Arduino Uno responsable de l'acquisition des données des capteurs, 
-            en utilisant le langage de programmation C/C++. 
-            
-        </p>
-         <p class="spaced-text">
-            Après avoir finis l'étape de conception et de programmation, nous sommes passés à l'étape de fabrication.
-            J'ai participé aussi aux tests de dérisquage pour avoir une conclusion sur les composant que nous avons choisis.
-            <a href="https://drive.google.com/drive/folders/1DOSexEQjEjUbCcIK5jiq3Ec4l6NrXrN1" target="_blank" class="link-no-scale colorful-letter">
-                Cliquez ici pour voir les vidéos des tests de dérisquage.
-            </a>
-
-        </p>
-    </section>
-
-
-<section class="wrapper">
-
-    <!-- Bloc DDC -->
-    <section class="column card">
-        <h2 class="main-title center padding">Dossier de Conception</h2>
-            <p class="spaced-text center">
-            Téléchargez ou consultez le Dossier de Conception pour en savoir plus sur le développement de ce projet.
-        </p>
-
-        <div class="button-row center">
-            <a href="assets/B1_DDC_EQ12_V1.docx.pdf" download class="button-outline" target="_blank">Télécharger DDC (PDF)</a>
-            <a href="assets/B1_DDC_EQ12_V1.docx.pdf" class="button-outline" target="_blank">Voir DDC</a>
+  <main class="section">
+    <div class="container detail-layout">
+      <aside class="surface sidebar">
+        <span class="eyebrow">Projet 01</span>
+        <h2 style="margin-top:14px;">Robot Mini-Sumo</h2>
+        <p class="muted" style="margin-top:14px;">Robot autonome conçu pour répondre à des exigences de détection, de propulsion et de départ synchronisé.</p>
+        <div class="chip-stack" style="margin-top:18px;">
+          <span class="chip">DDC</span>
+          <span class="chip">DDF</span>
+          <span class="chip">ATMEGA328P</span>
+          <span class="chip">Arduino Uno</span>
         </div>
-    </section>
-
-    <!-- Bloc DDF -->
-    <section class="column card">
-        <h2 class="main-title center padding">Dossier de Fabrication</h2>
-
-        <p class="spaced-text center">
-            Téléchargez ou consultez le Dossier de Fabrication pour en savoir plus sur le développement de ce projet.
-        </p>
-
-        <div class="button-row center">
-            <a href="assets/B1_DDF_EQ12_V1.docx.pdf" download class="button-outline" target="_blank">Télécharger DDF (PDF)</a>
-            <a href="assets/B1_DDF_EQ12_V1.docx.pdf" class="button-outline" target="_blank">Voir DDF</a>
+        <nav class="side-nav">
+          <a data-section-link href="#vue-ensemble">Vue d’ensemble</a>
+          <a data-section-link href="#analyse">Analyse fonctionnelle</a>
+          <a data-section-link href="#solutions">Choix techniques</a>
+          <a data-section-link href="#detail">Conception détaillée</a>
+          <a data-section-link href="#fabrication">Fabrication</a>
+          <a data-section-link href="#verification">Dérisquage et validation</a>
+        </nav>
+        <div class="contact-links" style="margin-top:18px;">
+          <a class="button-outline" href="assets/B1_DDC_EQ12_V1.docx.pdf" target="_blank">Ouvrir le DDC</a>
+          <a class="button-outline" href="assets/B1_DDF_EQ12_V1.docx.pdf" target="_blank">Ouvrir le DDF</a>
         </div>
+      </aside>
 
-    </section>
+      <div class="detail-content">
+        <section class="detail-section surface" id="vue-ensemble" data-section>
+          <span class="eyebrow">Vue d’ensemble</span>
+          <h1 style="margin-top:14px;">Synthèse du projet</h1>
+          <p class="muted" style="margin-top:16px;">Le dossier de conception présente un robot mini-sumo organisé autour de quatre blocs : acquisition, traitement, action et énergie. Le système doit détecter l’adversaire à distance, distinguer la ligne blanche du dohyo, recevoir un signal de départ infrarouge et commander les moteurs dans le respect du cahier des charges.</p>
+          <div class="kpi-grid" style="margin-top:18px;">
+            <div class="kpi"><span class="label">Bloc traitement</span><strong>ATMEGA328P</strong></div>
+            <div class="kpi"><span class="label">Départ</span><strong>Récepteur IR</strong></div>
+            <div class="kpi"><span class="label">Action</span><strong>Commande moteurs</strong></div>
+          </div>
+        </section>
 
-</section>
+        <section class="detail-section surface" id="analyse" data-section>
+          <span class="eyebrow">Analyse fonctionnelle</span>
+          <h3>Fonctions identifiées</h3>
+          <ul>
+            <li>Détecter la présence d’un adversaire à une distance minimum indiquée dans le cahier des charges.</li>
+            <li>Détecter le bord du ring par distinction entre la zone noire et la ligne blanche.</li>
+            <li>Recevoir l’ordre de départ via un signal infrarouge de télécommande.</li>
+            <li>Traiter les informations de capteurs et produire des commandes cohérentes pour les moteurs.</li>
+            <li>Garantir une alimentation compatible avec les besoins du microcontrôleur et des interfaces de puissance.</li>
+          </ul>
+          <div class="code-box mono" style="margin-top:16px;">capteurs -> ATMEGA328P -> pont en H -> moteurs</div>
+        </section>
 
+        <section class="detail-section surface" id="solutions" data-section>
+          <span class="eyebrow">Choix techniques</span>
+          <h3>Éléments retenus dans le dossier de conception</h3>
+          <ul>
+            <li>Choix des capteurs adversaire pour satisfaire la détection à distance sans être trop sensibles aux perturbations lumineuses.</li>
+            <li>Choix des capteurs de sol pour distinguer efficacement la bordure blanche du centre noir du dohyo.</li>
+            <li>Choix d’un pont en H pour la commande des moteurs avec inversion de sens.</li>
+            <li>Choix d’un régulateur de tension pour stabiliser l’alimentation des circuits électroniques.</li>
+            <li>Choix d’une LED et d’un récepteur infrarouge pour l’interface de départ et l’état de fonctionnement.</li>
+          </ul>
+        </section>
 
-    <!-- what did i learn 
-    <section class="w-900 padding center baby-pink-light">
-            <h3 class="main-title">Your title here</h3>
-            <ul class="justify padding-list-10">
-                <li class="no-padding-list-item"><span class="bold">I used this section to showcase what did i learn from creating this project!</span> </li>
-                <li class="no-padding-list-item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam nostrum odit, est quis assumenda numquam nesciunt, perspiciatis rerum veniam totam esse odio tenetur a vel iusto voluptas quasi maiores deserunt.</li>
-                <li class="no-padding-list-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, voluptatum officia dolores commodi dolorem necessitatibus sint voluptate quod esse rem? Recusandae dolorem iure inventore dolore delectus debitis sed in. Labore.</li>
-                <li class="no-padding-list-item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt deserunt debitis, possimus maxime ad repudiandae repellendus dolor animi accusamus voluptatem, nisi molestiae, tempora eum unde exercitationem temporibus magnam minus iste!</li>
-                <li class="no-padding-list-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit commodi aliquam modi nemo illo facere minima fuga vel, itaque natus voluptate rerum odit, accusantium eligendi. Alias ad beatae nulla cumque.</li> 
-                <li class="no-padding-list-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore maxime in unde, ad totam nesciunt atque consectetur ipsum sed quisquam deserunt numquam! Amet iusto eaque aliquid facilis odio facere officia!</li>
-                <li class="no-padding-list-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quaerat pariatur, odio corrupti voluptates fugit aut dicta iste totam veritatis commodi, quasi, eius eos doloremque. Tempora maiores eligendi provident repellendus.</li>
-            </ul>
-    </section>
-    -->
+        <section class="detail-section surface" id="detail" data-section>
+          <span class="eyebrow">Conception détaillée</span>
+          <h3>Décomposition des sous-ensembles</h3>
+          <ul>
+            <li>Partie acquisition : capteurs adversaires, capteurs de sol, capteur de télécommande et leurs schémas électriques associés.</li>
+            <li>Partie action : étage pont en H et code de commande associé.</li>
+            <li>Partie énergie : pont diviseur de tension, régulateur, batterie.</li>
+            <li>Partie traitement : microcontrôleur ATMEGA328P, schéma électrique et code informatique du cœur de traitement.</li>
+            <li>Intégration progressive des fonctions dans une logique de système complet.</li>
+          </ul>
+        </section>
 
-    <p class="wrapper justify-content"><a href="portfolio.html" class="link-no-scale colorful-letter">Back to portfolio</a></p>
+        <section class="detail-section surface" id="fabrication" data-section>
+          <span class="eyebrow">Fabrication</span>
+          <h3>Livrables de production disponibles</h3>
+          <div class="three-col" style="margin-top:18px;">
+            <div class="kpi"><span class="label">FAB01</span><strong>Schéma électrique</strong></div>
+            <div class="kpi"><span class="label">FAB02</span><strong>Nomenclature</strong></div>
+            <div class="kpi"><span class="label">FAB03</span><strong>Typons</strong></div>
+            <div class="kpi"><span class="label">FAB04</span><strong>Plan de perçage</strong></div>
+            <div class="kpi"><span class="label">FAB05</span><strong>Implantation</strong></div>
+            <div class="kpi"><span class="label">Archive</span><strong>Fichiers de conception</strong></div>
+          </div>
+          <p class="muted" style="margin-top:16px;">Le dossier de fabrication explicite que ces documents permettent d’exploiter, consulter ou reproduire la carte développée. Le typon est annoncé à l’échelle 1 pour un usage direct en gravure.</p>
+        </section>
 
-    <!-- footer -->
-    <footer>@dionisiohebo7</footer>
+        <section class="detail-section surface" id="verification" data-section>
+          <span class="eyebrow">Dérisquage et validation</span>
+          <h3>Essais et conformité</h3>
+          <ul>
+            <li>Simulation des capteurs à ultrasons.</li>
+            <li>Simulation du pont en H.</li>
+            <li>Simulation du départ.</li>
+            <li>Simulation des capteurs de sol.</li>
+            <li>Matrice de conformité du produit pour relier la solution finale aux exigences du cahier des charges.</li>
+          </ul>
+          <p class="muted" style="margin-top:16px;">Le projet ne s’arrête pas au câblage. Il montre une logique de dérisquage avant validation finale, ce qui donne du poids aux choix techniques retenus.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">@dionisiohebo7</footer>
+  <script src="app.js"></script>
 </body>
-
 </html>

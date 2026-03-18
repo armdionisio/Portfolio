@@ -1,154 +1,190 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Review this part and modify it to your liking -->
-    <meta name="description" content="Sample text for portfolio template meta tag">
-    <meta name="keywords" content="Sample text for portfolio template meta tag">
-    <meta name="author" content="Sample text for portfolio template meta tag">
-    <title>Mes Compétences</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- This subpage also benefits from the about me, because of the media queries -->
-    <link rel="stylesheet" type="text/css" href="style-about-me.css">
-    <link rel="stylesheet" type="text/css" href="style-skill-set.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compétences par preuves de Dionísio Hebo à partir des projets Robot Mini-Sumo et Informatique Industrielle.">
+  <title>Dionísio Hebo - Compétences par preuves</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Montserrat:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
-        <label for="drop" class="toggle" id="main-toggle">
-            <span class="nav-icon"></span>
-        </label>
-        <input type="checkbox" id="drop">
-        <ul class="main-nav">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="about-me.html">À propos de moi</a></li>
-            <li><a href="skill-set.html">Compétences</a></li>
-            <li><a href="portfolio.html">Mes projets</a></li>
-            <li><a href="index.html#contact-me">Contactez-moi</a></li>
-        </ul>
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+      <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+      <div class="nav-links" data-nav>
+        <a href="index.html">Accueil</a>
+        <a href="about-me.html">Profil</a>
+        <a class="active" href="skill-set.html">Compétences</a>
+        <a href="portfolio.html">Projets</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- hard skills -->
-    <section>
-        <h2 class="main-title-large center padding">Compétences</h2>
-    </section>
+  <main class="section">
+    <div class="container surface" style="padding:32px;">
+      <span class="eyebrow">Compétences par preuves</span>
+      <h1 style="margin-top:16px;">Correspondance entre compétences et réalisations</h1>
+      <p class="muted" style="margin-top:16px; max-width: 72ch;">Chaque bloc ci-dessous rassemble des éléments observables dans les projets documentés. Le filtre permet d’afficher uniquement les preuves liées au Robot Mini-Sumo ou au projet d’Informatique Industrielle.</p>
+      <div class="evidence-toolbar" style="margin-top:22px;">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">Tous les projets</button>
+          <button class="filter-btn" data-filter="sumo">Robot Mini-Sumo</button>
+          <button class="filter-btn" data-filter="indus">Informatique Industrielle</button>
+        </div>
+        <a class="button-outline" href="portfolio.html">Accéder aux dossiers projets</a>
+      </div>
+    </div>
 
-    <section class="grid-system-2 w-900 padding">
-        <section>
-            <h3 class="main-title">Savoir-faire</h3>
-            <section class="skills">
-                <ul class="no-bullet-list no-padding-list-item">
-                    <li>
-                        <p>Conception des cartes électroniques</p>
-                        <span class="progress-bar"><span class="f1"></span></span>
-                    </li>
-                    <li>
-                        <p>Arduino</p>
-                        <span class="progress-bar"><span class="f2"></span></span>
-                    </li>
-                    <li>
-                        <p>Simulation de circuits</p>
-                        <span class="progress-bar"><span class="f3"></span></span>
-                    </li>
-                    <li>
-                        <p>Suite Protheus et Kicad</p>
-                        <span class="progress-bar"><span class="f4"></span></span>
-                    </li>
-                </ul>
-            </section>
-        </section>
-        <section class="justify">
-            <h3 class="main-title"></h3>
-            <p class="spaced-text">En tant qu'étudiant, je suis en phase de développement de solides compétences techniques, essentielles pour mes projets en électronique et programmation. </p>
-            <p class="spaced-text">Je me concentre activement sur la Conception de Cartes Électroniques (PCB Design), cherchant à maîtriser l'ensemble du processus, 
-                de la schématique à l'industrialisation. 
-                J'approfondis ma maîtrise du langage Python que j'applique pour résoudre des problèmes concrets. </p>
-            <p class="spaced-text">De plus, j'acquiers de l'expérience en Simulation de Circuits, 
-                notamment grâce à l'utilisation d'outils professionnels comme la Suite Proteus, 
-                afin de valider et d'optimiser le fonctionnement de mes designs avant leur implémentation physique.</p>
-        </section>
-    </section>
+    <div class="container section competences-list">
+      <article class="card competence-card" id="competence-conception">
+        <header>
+          <div>
+            <span class="eyebrow">Compétence 1</span>
+            <h2 style="margin-top:12px;">Produire une analyse fonctionnelle et structurer l’architecture d’un système simple</h2>
+          </div>
+          <span class="chip">Fonctions -> blocs -> interfaces</span>
+        </header>
+        <div class="evidence-grid">
+          <section class="evidence-block" data-project="sumo">
+            <h4>Projet Robot Mini-Sumo</h4>
+            <ul>
+              <li>Architecture électronique décrite autour des blocs acquisition, traitement, action et énergie.</li>
+              <li>Prise en compte explicite des exigences liées à la détection de l’adversaire, à la détection du bord du dohyo, au départ infrarouge et au comportement global du robot.</li>
+              <li>Identification des sous-ensembles nécessaires : capteur de distance, capteurs de sol, récepteur infrarouge, microcontrôleur ATMEGA328P, étage de puissance moteurs et alimentation.</li>
+            </ul>
+          </section>
+          <section class="evidence-block" data-project="indus">
+            <h4>Projet Informatique Industrielle</h4>
+            <ul>
+              <li>Décomposition du système de commande du bras robotique en entrées/sorties, communication, traitement logiciel et actionnement.</li>
+              <li>Chaîne fonctionnelle claire entre commande utilisateur, liaison série, application C et pilotage des servomoteurs.</li>
+              <li>Prise en compte de la position initiale, des consignes et du positionnement du préhenseur.</li>
+            </ul>
+          </section>
+        </div>
+      </article>
 
-    <!-- soft skills -->
-    <section class="grid-system-2 w-900 padding">
-        <section>
-            <h3 class="main-title">Savoir-être</h3>
-            <section class="skills">
-                <ul class="no-bullet-list no-padding-list-item">
-                    <li>
-                        <p>Communication</p>
-                        <span class="progress-bar"><span class="e1"></span></span>
-                    </li>
-                    <li>
-                        <p>Travail en équipe et adaptabilité</p>
-                        <span class="progress-bar"><span class="e2"></span></span>
-                    </li>
-                    <li>
-                        <p>Résolution des problèmes</p>
-                        <span class="progress-bar"><span class="e3"></span></span>
-                    </li>
-                    <li>
-                        <p>Ouvert d'esprit</p>
-                        <span class="progress-bar"><span class="e4"></span></span>
-                    </li>
-                </ul>
-            </section>
-        </section>
-        <section class="justify grid-flip">
-            <h3 class="main-title"></h3>
-            <p class="spaced-text">En tant qu'étudiant étranger, je travail aussi mes compétences en communication  
-                pour faciliter l'échange d'idées et l'interaction au sein de groupes de travail.</p>
-            <p class="spaced-text">Je suis un joueur d'équipe et fais preuve d'une grande adaptabilité, 
-                essentiel pour naviguer dans les environnements académiques et les projets multidisciplinaires.</p>
-            <p class="spaced-text">Ma résolution de problèmes est une compétence clé que j'applique pour surmonter 
-                les défis techniques et théoriques. Je cultive un esprit ouvert, ce qui me permet d'intégrer de 
-                nouvelles perspectives et d'apprendre rapidement.</p>
-        </section>
-    </section>
+      <article class="card competence-card">
+        <header>
+          <div>
+            <span class="eyebrow">Compétence 2</span>
+            <h2 style="margin-top:12px;">Proposer des solutions techniques cohérentes avec l’analyse réalisée</h2>
+          </div>
+          <span class="chip">Choix composants et interfaces</span>
+        </header>
+        <div class="evidence-grid">
+          <section class="evidence-block" data-project="sumo">
+            <h4>Projet Robot Mini-Sumo</h4>
+            <ul>
+              <li>Choix argumenté des capteurs adversaire, des capteurs de sol, du pont en H, du régulateur de tension, de la LED et du récepteur IR.</li>
+              <li>Sélection d’une carte Arduino Uno comme support de la carte d’interface, avec ATMEGA328P comme cœur du traitement.</li>
+              <li>Définition d’une solution de commande moteur compatible avec les exigences de comportement et d’alimentation du robot.</li>
+            </ul>
+          </section>
+          <section class="evidence-block" data-project="indus">
+            <h4>Projet Informatique Industrielle</h4>
+            <ul>
+              <li>Utilisation d’une Raspberry Pi pour l’accès direct aux GPIO et l’exécution de programmes en C.</li>
+              <li>Mise en œuvre d’une liaison USB/RS232 et configuration du terminal série à 19200 bit/s, 8 bits de données, 1 bit de stop, sans parité.</li>
+              <li>Choix d’une librairie dédiée au pilotage des GPIO et des servomoteurs pour garantir une commande exploitable.</li>
+            </ul>
+          </section>
+        </div>
+      </article>
 
-    <!--future plans in skill development-->
-    <!-- tell about how you improve your knowledge, if you have something important, the "colorful-letter" class may come handy, use it anywhere -->
-    <section class="w-900">
-        <section class="baby-pink-light">
-            <h3 class="main-title padding-top">Plans futurs pour le développement de mes compétences</h3>
-            <section class="justify">
-                
-                <li>
-                    <p class="spaced-text">
-                    Approfondissement des connaissances techniques dans les outils et technologies liés à 
-                    mon domaine afin d’améliorer la qualité et l’efficacité de mes travaux.</p>
-                </li>
-                <li><p class="spaced-text">
-                    Développement de compétences transversales, notamment en gestion de projet, organisation et communication.
-                </p></li>
-                <li><p class="spaced-text">
-                    Mise en pratique continue à travers de nouveaux projets personnels et collaboratifs pour consolider l’apprentissage.
-                </p></li>
-            </section>
-        </section>
-    </section>
+      <article class="card competence-card">
+        <header>
+          <div>
+            <span class="eyebrow">Compétence 3</span>
+            <h2 style="margin-top:12px;">Réaliser un prototype matériel et logiciel exploitable</h2>
+          </div>
+          <span class="chip">Schéma, carte, code</span>
+        </header>
+        <div class="evidence-grid">
+          <section class="evidence-block" data-project="sumo">
+            <h4>Projet Robot Mini-Sumo</h4>
+            <ul>
+              <li>Conception détaillée des parties acquisition, action, énergie et traitement dans le dossier de conception.</li>
+              <li>Production des documents de fabrication : schéma électrique, nomenclature, typons, plan de perçage et schéma d’implantation.</li>
+              <li>Préparation d’un ensemble documentaire permettant la fabrication de la carte et sa reproduction.</li>
+            </ul>
+          </section>
+          <section class="evidence-block" data-project="indus">
+            <h4>Projet Informatique Industrielle</h4>
+            <ul>
+              <li>Écriture d’un programme en C incluant les définitions de broches, l’initialisation des GPIO et l’activation des servomoteurs.</li>
+              <li>Développement d’applications de réception et de transmission de données entre terminaux puis via une application en C.</li>
+              <li>Commande de la base, de l’avant-bras et de la pince par signaux de type servo.</li>
+            </ul>
+          </section>
+        </div>
+      </article>
 
-    <!-- footer -->
-    <footer>@dionisiohebo7</footer>
+      <article class="card competence-card" id="competence-verification">
+        <header>
+          <div>
+            <span class="eyebrow">Compétence 4</span>
+            <h2 style="margin-top:12px;">Vérifier le fonctionnement, dérisquer et valider une solution</h2>
+          </div>
+          <span class="chip">Essais et conformité</span>
+        </header>
+        <div class="evidence-grid">
+          <section class="evidence-block" data-project="sumo">
+            <h4>Projet Robot Mini-Sumo</h4>
+            <ul>
+              <li>Présence d’un chapitre de dérisquage avec simulation des capteurs à ultrasons, du pont en H, du départ et des capteurs de sol.</li>
+              <li>Matrice de conformité du produit pour relier le prototype aux exigences du cahier des charges.</li>
+              <li>Vérification progressive de la faisabilité et des choix retenus avant validation finale.</li>
+            </ul>
+          </section>
+          <section class="evidence-block" data-project="indus">
+            <h4>Projet Informatique Industrielle</h4>
+            <ul>
+              <li>Validation de l’accès aux entrées/sorties de la Raspberry Pi et vérification du comportement attendu après initialisation.</li>
+              <li>Essais de transmission de caractères, de trames et de valeurs entières entre PC et carte via la liaison série.</li>
+              <li>Tests de commande des servomoteurs et du positionnement du préhenseur à partir de paramètres envoyés.</li>
+            </ul>
+          </section>
+        </div>
+      </article>
+
+      <article class="card competence-card">
+        <header>
+          <div>
+            <span class="eyebrow">Compétence 5</span>
+            <h2 style="margin-top:12px;">Rendre le travail traçable par une documentation technique structurée</h2>
+          </div>
+          <span class="chip">Livrables et traçabilité</span>
+        </header>
+        <div class="evidence-grid">
+          <section class="evidence-block" data-project="sumo">
+            <h4>Projet Robot Mini-Sumo</h4>
+            <ul>
+              <li>Dossier de conception structuré avec architecture préliminaire, conception détaillée, dérisquage, conclusion et matrice de conformité.</li>
+              <li>Dossier de fabrication regroupant les documents nécessaires à la production en série du produit développé.</li>
+              <li>Archivage des fichiers associés au projet et identification des références documentaires.</li>
+            </ul>
+          </section>
+          <section class="evidence-block" data-project="indus">
+            <h4>Projet Informatique Industrielle</h4>
+            <ul>
+              <li>Compte rendu découpé en TPs successifs, depuis l’accès aux GPIO jusqu’au contrôle du préhenseur.</li>
+              <li>Présentation des extraits de code, des choix d’interface et des résultats obtenus au cours des essais.</li>
+              <li>Conclusion globale sur la progression technique réalisée au fil des manipulations.</li>
+            </ul>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">@dionisiohebo7</footer>
+  <script src="app.js"></script>
 </body>
-
 </html>

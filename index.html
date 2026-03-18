@@ -1,204 +1,203 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Review this part and modify it to your liking -->
-    <meta name="description" content="Sample text for portfolio template meta tag">
-    <meta name="keywords" content="Sample text for portfolio template meta tag">
-    <meta name="author" content="Sample text for portfolio template meta tag">
-    <title>Dionísio Hebo - Portfolio</title>
-    <!-- Adding favicon for older and modern browsers,
-        It is best to add favicon to the main folder, 
-        I used an only ico converter for best result,
-        Do not forget to clear you cache to see the changes -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Dionísio Hebo, étudiant en BUT GEII parcours Électronique et Systèmes Embarqués : projets, preuves techniques et réalisations documentées.">
+  <meta name="keywords" content="BUT GEII, électronique, systèmes embarqués, portfolio, Bordeaux, robot sumo, Raspberry Pi">
+  <meta name="author" content="Dionísio Hebo">
+  <title>Dionísio Hebo - Portfolio technique</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Montserrat:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
-        <label for="drop" class="toggle" id="main-toggle">
-            <span class="nav-icon"></span>
-        </label>
-        <input type="checkbox" id="drop">
-            <ul class="main-nav">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about-me.html">À propos de moi</a></li>
-                <li><a href="skill-set.html">Compétences</a></li>
-                <li><a href="portfolio.html">Mes projets</a></li>
-                <li><a href="#contact-me">Contactez-moi</a></li>
-            </ul>
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="index.html">
+        <strong>Dionísio Hebo</strong>
+        <span>Électronique & Systèmes Embarqués</span>
+      </a>
+      <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+      <div class="nav-links" data-nav>
+        <a class="active" href="index.html">Accueil</a>
+        <a href="about-me.html">Profil</a>
+        <a href="skill-set.html">Compétences</a>
+        <a href="portfolio.html">Projets</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- introduction -->
-    <header class="grid-system-2 w-900 padding">
-        <section class="align-center">
-            <h1 class="medium-spacing">Salut, je suis</h1>
-            <h1 class="large">Dionísio HEBO</h1>
-            <p class="justify spaced-text">Étudiant angolais en deuxième année de Génie Électrique et Informatique Industrielle à l'IUT de Bordeaux dans le 
-                parcours d'Électronique et Systèmes Embarqués.</p>
-        </section>
-        <section class="center align-center">
-            <img class="header-img max-width max-height" src="assets/about_me.png" alt="profile-picture">
-
-        </section>
-    </header>
-
-    <!-- CV Section -->
-    <section class="w-900 padding center">
-        <h2 class="main-title center padding">Curriculum Vitae</h2>
-        <p class="justify center spaced-text">Téléchargez ou consultez mon CV pour en savoir plus sur mon parcours professionnel et académique.</p>
-        <section class="padding-top" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <a href="assets/cv_dionisio.pdf" download class="button-outline" target="_blank">Télécharger CV (PDF)</a>
-            <a href="assets/cv_dionisio.pdf" class="button-outline" target="_blank">Voir CV</a>
-        </section>
+  <main>
+    <section class="section">
+      <div class="container hero surface">
+        <div class="hero-copy">
+          <span class="eyebrow">Portfolio BUT GEII</span>
+          <div>
+            <h1>Dionísio Hebo</h1>
+            <p class="muted" style="margin-top:14px; max-width: 58ch;">Étudiant en deuxième année de Génie Électrique et Informatique Industrielle à l’IUT de Bordeaux, parcours Électronique et Systèmes Embarqués. Mon travail s’appuie sur la conception de cartes, l’architecture embarquée, le développement logiciel bas niveau et la validation expérimentale.</p>
+          </div>
+          <div class="chip-row">
+            <span class="chip">Conception électronique</span>
+            <span class="chip">Architecture embarquée</span>
+            <span class="chip">Validation système</span>
+            <span class="chip">Programmation C</span>
+          </div>
+          <div class="chip-row">
+            <a class="button" href="portfolio.html">Voir les projets</a>
+            <a class="button-outline" href="skill-set.html">Voir les compétences par preuves</a>
+            <a class="button-outline" href="assets/cv_dionisio.pdf" target="_blank">Consulter le CV</a>
+          </div>
+        </div>
+        <div class="hero-visual card">
+          <img src="assets/about_me.png" alt="Portrait illustré de Dionísio Hebo">
+          <div class="hero-grid"></div>
+        </div>
+      </div>
     </section>
 
-    <!-- quote -->
-    <article class="baby-pink">
-        <p class="spaced-text">Les systèmes embarqués transforment la technologie invisible en expériences réelles.</p>
-
-    </article>
-
-    <!-- about me -->
-    <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
-    <section class="wrapper">
-        <section class="margin-auto">
-            <img class="max-width max-height" src="assets/about_me2.png" alt="about-me-logo">
-            
-
-        </section>
-        <section class="justify align-center">
-            <p class="bold">À propos de moi</p>
-            <p></p>
-            <p class="justify spaced-text">Étudiant en Génie Électrique et Informatique Industrielle à l'IUT de Bordeaux, 
-                je suis passionné par la conception et le développement de solutions innovantes alliant électronique et informatique industrielle. 
-                Curieux et déterminé, je cherche constamment à approfondir mes connaissances à travers des projets pratiques et des défis techniques. 
-                Mon objectif est de transformer mes compétences en contributions concrètes dans un environnement professionnel exigeant.</p>
-            <p> </p>
-            <p class="padding-top"><a href="about-me.html" class="button-outline">Plus d'info</a></p>
-        </section>
+    <section class="section-tight">
+      <div class="container metrics">
+        <div class="metric surface">
+          <strong data-counter="2">0</strong>
+          <p class="muted">projets documentés avec preuves techniques</p>
+        </div>
+        <div class="metric surface">
+          <strong data-counter="3">0</strong>
+          <p class="muted">dossiers PDF exploités dans ce portfolio</p>
+        </div>
+        <div class="metric surface">
+          <strong data-counter="6">0</strong>
+          <p class="muted">blocs de travaux pratiques en informatique industrielle</p>
+        </div>
+        <div class="metric surface">
+          <strong data-counter="5">0</strong>
+          <p class="muted">livrables de fabrication mentionnés pour le robot</p>
+        </div>
+      </div>
     </section>
 
-    <!-- skills -->
-    <!-- use this to showcase your skills, if you make changes, do not forget to modify the css accordingly -->
-    <section>
-        <h3 class="main-title center" style="padding: 20px 20px 0px 20px;">Savoir</h3>
-    </section>
-    <section class="wrapper">
-        <section class="column">
-            <p class="main-title center">Faire</p>
-            <section class="skills">
-                <ul class="no-bullet-list no-padding-list-item">
-                    <li>
-                        <p>Conception des cartes électroniques</p>
-                        <span class="progress-bar"><span class="f1"></span></span>
-                    </li>
-                    <li>
-                        <p>Arduino</p>
-                        <span class="progress-bar"><span class="f2"></span></span>
-                    </li>
-                    <li>
-                        <p>Simulation de circuits</p>
-                        <span class="progress-bar"><span class="f3"></span></span>
-                    </li>
-                    <li>
-                        <p>Suite Protheus et Kicad</p>
-                        <span class="progress-bar"><span class="f4"></span></span>
-                    </li>
-                </ul>
-            </section>
-        </section>
-        <section class="column">
-            <p class="main-title center">Être</p>
-            <section class="skills">
-                <ul class="no-bullet-list no-padding-list-item">
-                    <li>
-                        <p>Communication</p>
-                        <span class="progress-bar"><span class="e1"></span></span>
-                    </li>
-                    <li>
-                        <p>Travail en équipe et adaptabilité</p>
-                        <span class="progress-bar"><span class="e2"></span></span>
-                    </li>
-                    <li>
-                        <p>Résolution de problèmes</p>
-                        <span class="progress-bar"><span class="e3"></span></span>
-                    </li>
-                    <li>
-                        <p>Ouvert d'esprit</p>
-                        <span class="progress-bar"><span class="e4"></span></span>
-                    </li>
-                </ul>
-            </section>
-        </section>
+    <section class="section">
+      <div class="container two-col">
+        <article class="surface" style="padding:30px;">
+          <span class="eyebrow">Positionnement</span>
+          <h2 style="margin-top:14px;">Ce que montre ce site</h2>
+          <div class="timeline" style="margin-top:18px;">
+            <div class="timeline-item">
+              <div class="tag">01 / Concevoir</div>
+              <div>
+                <h3>Analyse fonctionnelle et choix techniques</h3>
+                <p class="muted">Architecture d’acquisition, de traitement, d’action et d’énergie pour un robot autonome, puis justification de composants et d’interfaces de commande.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="tag">02 / Réaliser</div>
+              <div>
+                <h3>Passage au prototype matériel et logiciel</h3>
+                <p class="muted">Schéma électrique, nomenclature, typons, plan de perçage, implantation, programmes C et commandes série pour système embarqué.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="tag">03 / Vérifier</div>
+              <div>
+                <h3>Essais, conformité et mise au point</h3>
+                <p class="muted">Matrice de conformité, simulation, validation des entrées/sorties, liaison série et pilotage de servomoteurs sur Raspberry Pi.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="surface hero-panel">
+          <span class="eyebrow">Documents exploités</span>
+          <h2 style="margin-top:14px;">Base documentaire</h2>
+          <div class="chip-stack" style="margin-top:18px;">
+            <span class="chip">DDC Robot Mini-Sumo</span>
+            <span class="chip">DDF Robot Mini-Sumo</span>
+            <span class="chip">Compte rendu de TP Informatique Industrielle</span>
+          </div>
+          <p class="muted" style="margin-top:18px;">Les formulations du portfolio s’appuient sur des éléments présents dans ces documents : architecture électronique, choix des capteurs, pont en H, régulation, microcontrôleur, simulations, schéma électrique, typons, communication série, GPIO, servomoteurs et commande du préhenseur.</p>
+          <div class="code-box mono" style="margin-top:18px;">
+            acquisition -> traitement -> action -> validation
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- Projects -->
-    <!-- If you have more projects you are working on at the moment, or just want to show more, double the whole section below without the title and you are good to go -->
-    <section>
-        <h3 class="main-title center padding">Projets sur lesquels je travaille actuellement</h3>
-    </section>
-    <section class="w-900 padding">
-        <section class="card justify flex margin-auto" style="max-width: 500px;">
-            <img class="box" src="assets/Sumo ISO 01.png" alt="project1">
-            <p class="padding bold center">Robot Sumo</p>
-            <p class="spaced-text">Développement d’un robot autonome capable de détecter un adversaire, 
-                d’adapter son comportement et de se déplacer de manière entièrement indépendante sur l’aire de combat. 
-                Le projet suit une démarche complète d’ingénierie : analyse des besoins, conception, assemblage, tests et validation. 
-                Avec mon équipe, je gère également la planification, le budget et la documentation afin de respecter les contraintes de taille, de masse, 
-                d’autonomie et de fonctionnement imposées. 
-                Ce projet me permet de mettre en pratique, en conditions réelles, mes compétences en électronique, programmation, capteurs et gestion de projet.</p>
-            <p></p>
-            <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Portfolio</a></p>
-        </section>
+    <section class="section">
+      <div class="container">
+        <div style="display:flex; justify-content:space-between; gap:20px; align-items:end; flex-wrap:wrap; margin-bottom:20px;">
+          <div>
+            <span class="eyebrow">Réalisations</span>
+            <h2 style="margin-top:14px;">Projets principaux</h2>
+          </div>
+          <a class="button-outline" href="portfolio.html">Vue détaillée des projets</a>
+        </div>
+        <div class="project-grid">
+          <article class="project-card card">
+            <img src="assets/Sumo ISO 01.png" alt="Robot Mini-Sumo">
+            <div class="project-body">
+              <h3>Robot Mini-Sumo</h3>
+              <p class="muted">Projet documenté par un dossier de conception et un dossier de fabrication. Le travail présenté couvre l’architecture électronique, les blocs fonctionnels, la conception détaillée, le dérisquage et les documents de production de la carte.</p>
+              <div class="chip-row">
+                <span class="chip">ATMEGA328P</span>
+                <span class="chip">Capteurs adversaire / sol</span>
+                <span class="chip">Pont en H</span>
+              </div>
+              <div class="project-footer">
+                <a class="button" href="project1.html">Dossier du projet</a>
+                <a class="button-outline" href="skill-set.html#competence-conception">Compétences liées</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card card">
+            <img src="assets/bras_robot.jpg" alt="Bras robotique piloté par Raspberry Pi">
+            <div class="project-body">
+              <h3>Informatique Industrielle - Bras robotique</h3>
+              <p class="muted">Suite de travaux pratiques centrée sur la Raspberry Pi : accès GPIO, communication série, application en C, contrôle des servomoteurs et positionnement du préhenseur.</p>
+              <div class="chip-row">
+                <span class="chip">Raspberry Pi</span>
+                <span class="chip">C / pigpio</span>
+                <span class="chip">USB-RS232</span>
+              </div>
+              <div class="project-footer">
+                <a class="button" href="project2.html">Dossier du projet</a>
+                <a class="button-outline" href="skill-set.html#competence-verification">Compétences liées</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- contact me -->
-
-    <section id="contact-me" class="grid-system-2 w-900 padding">
-        <section class="margin-auto">
-            <img class="max-width max-height" src="assets/contact-me.png" alt="contact-me-illustration">
-        </section>
-        <section class="margin-auto align-center">
-            <h1 class="medium-spacing center">Contactez-moi<span></span></h1>
-            <section class="box-contact margin-auto padding-top">
-                <span>
-                    <a href="https://www.linkedin.com/in/dionísio-hebo-2b168b335?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank"><img class="logo" src="assets/linkedin.png"
-                            alt=""></a>
-                </span>             
-                <span>
-                    <a href="mailto:dionisiohebo7@gmail.com"><img class="logo" src="assets/email.png" alt="Enviar E-mail para dionisiohebo7@gmail.com"></a>
-                </span>
-            </section>
-        </section>
+    <section class="section">
+      <div class="container contact-grid" id="contact">
+        <article class="surface contact-card">
+          <span class="eyebrow">Profil</span>
+          <h2 style="margin-top:14px;">Approche de travail</h2>
+          <p class="muted" style="margin-top:16px;">Je privilégie une démarche structurée : partir d’un besoin, le traduire en fonctions, choisir une solution cohérente avec les contraintes, puis vérifier le fonctionnement par des essais lisibles et des livrables traçables.</p>
+          <div class="contact-links">
+            <a class="contact-link" href="about-me.html">En savoir plus</a>
+            <a class="contact-link" href="assets/cv_dionisio.pdf" target="_blank">CV PDF</a>
+          </div>
+        </article>
+        <article class="surface contact-card">
+          <span class="eyebrow">Contact</span>
+          <h2 style="margin-top:14px;">Coordonnées</h2>
+          <p class="muted" style="margin-top:16px;">Disponible pour un échange autour de l’électronique, de l’embarqué et des projets de conception expérimentale.</p>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:dionisiohebo7@gmail.com"><img class="logo" src="assets/email.png" alt="Email">dionisiohebo7@gmail.com</a>
+            <a class="contact-link" href="https://www.linkedin.com/in/dionísio-hebo-2b168b335?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank"><img class="logo" src="assets/linkedin.png" alt="LinkedIn">LinkedIn</a>
+            <a class="contact-link" href="https://github.com/" target="_blank"><img class="logo" src="assets/github.png" alt="GitHub">GitHub</a>
+          </div>
+        </article>
+      </div>
     </section>
+  </main>
 
-    
-    </section>
-
-    <footer>@dionisiohebo7</footer>
+  <footer class="footer">@dionisiohebo7</footer>
+  <script src="app.js"></script>
 </body>
-
 </html>
