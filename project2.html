@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Développement C et pilotage de bras robotique via Raspberry Pi par Dionísio Hebo.">
+  <title>Projet Informatique Industrielle | Dionísio Hebo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Estilos para a estrutura de detalhes técnicos */
+    .detail-layout { display: flex; gap: 30px; align-items: flex-start; }
+    
+    .side-list {
+      position: sticky;
+      top: 100px;
+      width: 260px;
+      min-width: 260px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 20px;
+    }
+    
+    .side-list a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.85rem;
+      transition: all 0.3s;
+      border-left: 2px solid transparent;
+      padding-left: 10px;
+    }
+    
+    .side-list a:hover { 
+      color: var(--primary-color); 
+      border-left: 2px solid var(--primary-color);
+    }
+    
+    .detail-stack { flex-grow: 1; display: flex; flex-direction: column; gap: 24px; }
+    .detail-section { padding: 30px; }
+    
+    .code-inline {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      color: #d63384;
+    }
+
+    .tech-list { list-style: none; padding: 0; margin-top: 15px; }
+    .tech-list li { margin-bottom: 12px; padding-left: 25px; position: relative; }
+    .tech-list li::before { content: "•"; position: absolute; left: 8px; color: var(--primary-color); font-weight: bold; }
+
+    @media (max-width: 768px) {
+      .detail-layout { flex-direction: column; }
+      .side-list { position: static; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+    <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+    <div class="nav-links" data-nav>
+      <a href="index.html">Accueil</a>
+      <a href="about-me.html">Profil</a>
+      <a href="portfolio.html">Compétences GEII</a>
+      <a class="active" href="portfolio.html">Compétences GEII</a>
+      <a href="angola.html">Angola</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="button-outline" data-theme-toggle type="button" style="padding: 10px 14px;">🌙 Mode sombre</button>
+  </nav>
+</header>
+
+<main class="section">
+  <div class="container">
+    <a href="portfolio.html" style="text-decoration: none; font-weight: 600; font-size: 0.9rem; color: #666;">← Retour aux Compétences GEII</a>
+    
+    <div class="surface page-hero" style="margin-top: 20px; padding: 40px;">
+      <span class="eyebrow">Systèmes Embarqués Linux</span>
+      <h1 style="margin-top:16px;">Informatique Industrielle : Commande Robotique</h1>
+      <p class="muted" style="margin-top:16px; max-width:75ch; line-height:1.6;">
+        Pilotage d'un bras articulé à 4 axes via une <strong>Raspberry Pi</strong>. Développement d'un firmware en <strong>Langage C</strong> exploitant la bibliothèque <span class="code-inline">pigpio</span> pour la gestion du temps réel et de la communication série.
+      </p>
+      <div class="button-row" style="margin-top:20px;">
+        <a class="button" href="assets/docs/HEBO_B1b_Info_Indus (1).pdf" target="_blank" rel="noopener">Consulter le Rapport Technique (PDF)</a>
+      </div>
+    </div>
+
+    <div class="detail-layout" style="margin-top:30px;">
+      <!-- Sidebar de navegação -->
+      <aside class="surface side-list card">
+        <h4 style="margin-bottom: 10px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Sommaire technique</h4>
+        <a href="#synthese">Objectifs du TP</a>
+        <a href="#gpio">GPIO & pigpio</a>
+        <a href="#serie">Liaison UART / Série</a>
+        <a href="#application">Logiciel en C</a>
+        <a href="#servos">Commande Servo</a>
+        <a href="#prehenseur">Cinématique & Résultats</a>
+      </aside>
+
+      <!-- Conteúdo principal -->
+      <div class="detail-stack">
+        
+        <section class="detail-section surface" id="synthese">
+          <span class="eyebrow">Résumé</span>
+          <h2 style="margin-top:14px;">Objectif du travail</h2>
+          <p class="muted" style="margin-top:16px;">
+            L'enjeu de ce projet était de construire une stack logicielle complète : de l'accès matériel (Low-level) à l'interface utilisateur via terminal, permettant un positionnement précis du préhenseur robotique.
+          </p>
+        </section>
+
+        <section class="detail-section surface" id="gpio">
+          <span class="eyebrow">Hardware</span>
+          <h2 style="margin-top:14px;">Gestion des GPIO</h2>
+          <ul class="tech-list">
+            <li>Configuration des registres de sortie pour les signaux PWM.</li>
+            <li>Utilisation de la bibliothèque <span class="code-inline">pigpio</span> pour garantir une gigue (jitter) minimale sur les servomoteurs.</li>
+            <li>Séquence d'initialização sécurisée (Homing) pour éviter les collisions mécaniques au démarrage.</li>
+          </ul>
+        </section>
+
+        <section class="detail-section surface" id="serie">
+          <span class="eyebrow">Protocoles</span>
+          <h2 style="margin-top:14px;">Liaison Série (UART)</h2>
+          <p class="muted">Mise en œuvre d'une communication robuste entre la Raspberry Pi et une station Windows :</p>
+          <ul class="tech-list">
+            <li><strong>Paramètres :</strong> 19200 bauds, 8N1 (8 bits data, No parity, 1 stop bit).</li>
+            <li><strong>Interface :</strong> Utilisation de <span class="code-inline">/dev/ttyUSB0</span> sous Linux et Hterm sous Windows.</li>
+            <li>Transmission de trames ASCII paramétrées pour le pilotage à distance.</li>
+          </ul>
+        </section>
+
+        <section class="detail-section surface" id="application">
+          <span class="eyebrow">Programmation</span>
+          <h2 style="margin-top:14px;">Applications C développées</h2>
+          <p class="muted">Développement modulaire incluant :</p>
+          <ul class="tech-list">
+            <li>Parsing de chaînes de caractères pour extraire les angles de consigne.</li>
+            <li>Gestion des erreurs de saisie pour protéger l'intégrité physique du bras.</li>
+            <li>Optimisation des boucles de contrôle pour une réponse fluide du système.</li>
+          </ul>
+        </section>
+
+        <section class="detail-section surface" id="prehenseur">
+          <span class="eyebrow">Validation</span>
+          <h2 style="margin-top:14px;">Positionnement du préhenseur</h2>
+          <p class="muted" style="margin-top:16px;">
+            Le succès du projet a été validé par l'exécution de séquences de mouvements complexes (Pick and Place). Ce travail démontre ma capacité à lier <strong>algorithmique logicielle</strong> e <strong>contraintes physiques</strong> de la robotique industrielle.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">Dionísio Hebo — Portfolio Professionnel</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

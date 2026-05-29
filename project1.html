@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Analyse technique complète du projet Robot Mini-Sumo : conception, CAO et validation.">
+  <title>Projet Robot Mini-Sumo | Dionísio Hebo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Melhorias para o layout de detalhes */
+    .detail-layout { display: flex; gap: 30px; align-items: flex-start; }
+    
+    .side-list {
+      position: sticky;
+      top: 100px; /* Mantém o menu visível ao rolar */
+      width: 250px;
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px;
+    }
+    
+    .side-list a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+    
+    .side-list a:hover { color: var(--primary-color); }
+    
+    .detail-stack { flex-grow: 1; display: flex; flex-direction: column; gap: 24px; width: 100%; min-width: 0; }
+    
+    .detail-section { padding: 30px; }
+    
+    .tech-list { 
+      list-style: none; 
+      margin-top: 16px;
+      padding: 0;
+    }
+    
+    .tech-list li {
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .tech-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+    }
+
+    /* Ajuste para a imagem principal do topo */
+    .project-visual {
+      width: 100%;
+      height: auto;
+      max-height: 450px;
+      object-fit: contain;
+      background-color: #fcfcfc;
+      display: block;
+      margin-top: 20px;
+    }
+
+    /* Style ajustado para os diagramas e imagens das seções */
+    .section-image {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 8px;
+      margin-top: 24px;
+      background-color: #fafafa;
+      border: 1px solid #eaeaea;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .detail-layout { flex-direction: column; }
+      .side-list { position: static; width: 100%; min-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+    <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+    <div class="nav-links" data-nav>
+      <a href="index.html">Accueil</a>
+      <a href="about-me.html">Profil</a>
+      <a href="portfolio.html">Compétences GEII</a>
+      <a href="angola.html">Angola</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="button-outline" data-theme-toggle type="button" style="padding: 10px 14px;">🌙 Mode sombre</button>
+  </nav>
+</header>
+
+<main class="section">
+  <div class="container">
+    <a href="portfolio.html" style="text-decoration: none; font-weight: 600; font-size: 0.9rem; color: #666;">← Retour aux Compétences GEII</a>
+    
+    <div class="surface page-hero" style="margin-top: 20px; padding: 40px;">
+      <span class="eyebrow">SAÉ - Systèmes Embarqués</span>
+      <h1 style="margin-top:16px;">Robot Mini-Sumo Autonome</h1>
+      <p class="muted" style="margin-top:16px; max-width:72ch; line-height:1.6;">
+        Conception d'un système mécatronique complet répondant à des contraintes de détection infrarouge, de gestion d'énergie et de propulsion bidirectionnelle, piloté par un microcontrôleur <strong>ATmega328P</strong>.
+      </p>
+      <div class="button-row" style="margin-top:20px;">
+        <a class="button" href="assets/docs/RMS-CDC v4.1.pdf" target="_blank" rel="noopener">Cahier des Charges (CDC)</a>  
+      </div>
+    </div>
+    <img src="assets/projects/sumo.png" alt="Vue d'ensemble du Robot Sumo" class="project-visual card">
+
+    <div class="detail-layout" style="margin-top:30px;">
+      <aside class="surface side-list card">
+        <h4 style="margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; color: #999;">Navigation</h4>
+        <a href="#vue-ensemble">Synthèse du projet</a>
+        <a href="#analyse">Analyse fonctionnelle</a>
+        <a href="#solutions">Choix techniques</a>
+        
+        <a href="#fabrication">Fabrication</a>
+        <a href="#verification">Vérification</a>
+      </aside>
+
+      <div class="detail-stack">
+        
+        <section class="detail-section surface" id="vue-ensemble">
+          <span class="eyebrow">Introduction</span>
+          <h2 style="margin-top:14px;">Synthèse du projet</h2>
+          <p class="muted" style="margin-top:16px;">
+            Le projet est structuré autour du cycle en V. Le robot doit être capable de détecter un adversaire, d'identifier les limites du ring (ligne blanche) et d'exécuter des stratégies d'attaque/défense de manière totalement autonome après un signal de départ IR.
+          </p>
+        </section>
+
+        <section class="detail-section surface" id="analyse">
+          <span class="eyebrow">Exigences</span>
+          <h2 style="margin-top:14px;">Fonctions principales</h2>
+          <ul class="tech-list">
+            <li><strong>Détection Adversaire :</strong> Acquisition via capteurs de distance avec filtrage des perturbations.</li>
+            <li><strong>Reconnaissance de Ligne :</strong> Distinction noir/blanc pour le maintien sur le Dohyo.</li>
+            <li><strong>Séquençage de Départ :</strong> Réception de trames infrarouges.</li>
+            <li><strong>Traitement :</strong> Algorithme d'évitement et de charge sur ATmega328P.</li>
+          </ul>
+          <img src="assets/projects/sumo-synthese.png" alt="Schéma d'analyse fonctionnelle" class="section-image">          
+        </section>
+
+        <section class="detail-section surface" id="solutions">
+          <span class="eyebrow">Solutions retenues</span>
+          <h2 style="margin-top:14px;">Solution technique pour répondre à une fonction</h2>
+          <p class="muted">Chaque choix a été validé par simulation ou calcul :</p>
+          <ul class="tech-list">
+            <li><strong>Détection de ligne :</strong> Pour répondre à l'exigence luminosité de notre cahier de charges, nous avons choisi le capteur utilisé 4 capteurs CNY70. Chacun de ces modules est équipé d'une diode infrarouge émettrice et d'un recepteur phototransistor. Par simulation, nous avons déterminé que ce capteur était adapté à notre application vu qu'il genere des resultats entre 0 et 1023 mais qu'on peut les transformer entre vrai et faux en choisissant un seuil approprié.</li>
+          </ul>
+          <img src="assets/projects/cny70.jpg" alt="Composants électroniques choisis" class="section-image">
+          <div class="project-footer">
+          <a class="button" href="assets/docs/B1_DDC_EQ12_V1.docx.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le DDC</a>
+        </div>
+        </section>
+
+        <section class="detail-section surface" id="fabrication">
+          <span class="eyebrow">Fabrication</span>
+          <h2 style="margin-top:14px;">Dossier de Fabrication (DDF)</h2>
+          <p class="muted" style="margin-top:16px;">
+            La phase de réalisation inclut le routage complet de la carte électronique. Les livrables comprennent :
+          </p>
+          <ul class="tech-list">
+            <li>Schématique propre avec labels fonctionnels.</li>
+            <li>Typon à l'échelle 1:1 pour gravure.</li>
+            <li>Plan d'implantation des composants et perçage.</li>
+            <li>Nomenclature complète (BOM) pour l'approvisionnement.</li>
+          </ul>
+          <p class="muted" style="margin-top:16px;">
+            Image du schéma d'implantation des composants
+          </p>
+          <img src="assets/projects/sumo-fabrication.png" alt="Routage et conception du PCB" class="section-image">
+          <div class="project-footer">
+          <a class="button" href="assets/docs/B1_DDF_EQ12_V1.docx.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le DDF</a>
+        </div>
+        </section>
+
+        <section class="detail-section surface" id="verification">
+          <span class="eyebrow">Vérification</span>
+          <h2 style="margin-top:14px;">Dérisquage </h2>
+          <p class="muted" style="margin-top:16px;">
+            Pour garantir la réussite, des simulations ont été effectuées pour montrer le bon fonctionnement de chaque composant et de l'architecture globale :
+          </p>
+          <div style="margin-top: 20px;">
+            <a href="https://drive.google.com/drive/u/0/folders/1zvShyXUbQo1hT0nyXGh__zEEIacyu7xr" 
+               target="_blank" 
+               class="btn-portfolio" 
+               style="display: inline-block; padding: 12px 24px; background-color: #007bff; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
+               📁 Regarder quelques vidéos de la vérification
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">Dionísio Hebo — Portfolio Professionnel</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compétences techniques en GEII : Électronique, Systèmes Embarqués et Informatique Industrielle.">
+  <title>Compétences | Dionísio Hebo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Styles pour la gestion du filtrage et de la clarté */
+    .filter-row { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+    .filter-row button { 
+      padding: 8px 16px; 
+      border: 1px solid #ddd; 
+      background: white; 
+      cursor: pointer; 
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+    .filter-row button.active { 
+      background: var(--primary-color, #333); 
+      color: white; 
+      border-color: var(--primary-color, #333); 
+    }
+    
+    .evidence-block { 
+      margin-top: 20px; 
+      padding-top: 15px; 
+      border-top: 1px solid #eee; 
+      transition: opacity 0.4s ease;
+    }
+    .evidence-block h3 { 
+      font-size: 1rem; 
+      color: var(--primary-color, #333); 
+      margin-bottom: 10px; 
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    /* Masquage via JS */
+    .hidden { display: none; }
+    
+    .skill-card { margin-bottom: 24px; transition: transform 0.2s; }
+    .skill-card:hover { transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+    <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+    <div class="nav-links" data-nav>
+      <a href="index.html">Accueil</a>
+      <a href="about-me.html">Profil</a>
+      <a href="portfolio.html">Compétences GEII</a>
+      <a href="angola.html">Angola</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="button-outline" data-theme-toggle type="button" style="padding: 10px 14px;">🌙 Mode sombre</button>
+  </nav>
+</header>
+
+<main class="section">
+  <div class="container surface page-hero" style="padding: 40px;">
+    <span class="eyebrow">Référentiel de Compétences</span>
+    <h1 style="margin-top:16px;">Compétences BUT GEII & Preuves Techniques</h1>
+    <p class="muted" style="margin-top:18px; max-width:75ch;">
+      Cette page établit la correspondance directe entre les compétences acquises durant ma formation et les preuves tangibles issues de mes projets. Utilisez les filtres pour isoler les compétences par projet.
+    </p>
+    <div class="filter-row">
+      <button class="active" data-filter="all">Tout afficher</button>
+      <button data-filter="sumo">Robot Mini-Sumo</button>
+      <button data-filter="indus">Informatique Industrielle</button>
+    </div>
+  </div>
+
+  <div class="container detail-stack" style="margin-top:30px;">
+    
+    <!-- BLOC 1 -->
+    <article class="card skill-card" style="padding:28px;">
+      <span class="eyebrow">Bloc 1 : ANALYSER</span>
+      <h2 style="margin-top:12px;">Produire une analyse fonctionnelle et structurer l’architecture d’un système</h2>
+      
+      <section class="evidence-block" data-project="sumo">
+        <h3>Projet : Robot Mini-Sumo</h3>
+        <ul class="muted">
+          <li>Architecture électronique structurée (Acquisition → Traitement → Action).</li>
+          <li>Prise en compte des contraintes de détection et de démarrage IR.</li>
+          <li>Identification du microcontrôleur <strong>ATMEGA328P</strong> comme cœur de cible.</li>
+        </ul>
+      </section>
+
+      <section class="evidence-block" data-project="indus">
+        <h3>Projet : Informatique Industrielle</h3>
+        <ul class="muted">
+          <li>Modélisation de la chaîne de commande d'un bras robotique.</li>
+          <li>Structuration de la communication entre l'interface PC et la cible <strong>Raspberry Pi</strong>.</li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- BLOC 2 -->
+    <article class="card skill-card" style="padding:28px;">
+      <span class="eyebrow">Bloc 2 : CONCEVOIR</span>
+      <h2 style="margin-top:12px;">Proposer des solutions techniques cohérentes avec l’analyse réalisée</h2>
+      
+      <section class="evidence-block" data-project="sumo">
+        <h3>Projet : Robot Mini-Sumo</h3>
+        <ul class="muted">
+          <li>Justification des choix : Pont en H pour la puissance, Régulateur LDO pour la logique.</li>
+          <li>Sélection de capteurs de sol à seuil pour la détection de ligne blanche.</li>
+        </ul>
+      </section>
+
+      <section class="evidence-block" data-project="indus">
+        <h3>Projet : Informatique Industrielle</h3>
+        <ul class="muted">
+          <li>Configuration protocolaire : UART 19200 bit/s, 8N1.</li>
+          <li>Utilisation de la librairie <strong>pigpio</strong> pour la précision des signaux PWM des servos.</li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- BLOC 3 -->
+    <article class="card skill-card" style="padding:28px;">
+      <span class="eyebrow">Bloc 3 : CONCEVOIR</span>
+      <h2 style="margin-top:12px;">Concevoir un prototype matériel et logiciel exploitable</h2>
+      
+      <section class="evidence-block" data-project="sumo">
+        <h3>Projet : Robot Mini-Sumo</h3>
+        <ul class="muted">
+          <li>Réalisation du <strong>Dossier de Fabrication (DDF)</strong> complet.</li>
+          <li>Production des typons de circuits imprimés à l'échelle 1:1.</li>
+        </ul>
+      </section>
+
+      <section class="evidence-block" data-project="indus">
+        <h3>Projet : Informatique Industrielle</h3>
+        <ul class="muted">
+          <li>Développement d'applications en <strong>Langage C</strong> pilotant des E/S complexes.</li>
+          <li>Codage de la cinématique de base du préhenseur.</li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- BLOC 4 -->
+    <article class="card skill-card" style="padding:28px;">
+      <span class="eyebrow">Bloc 4 : VÉRIFIER</span>
+      <h2 style="margin-top:12px;">Vérifier le fonctionnement, dérisquer et valider une solution</h2>
+      
+      <section class="evidence-block" data-project="sumo">
+        <h3>Projet : Robot Mini-Sumo</h3>
+        <ul class="muted">
+          <li>Simulation Proteus/SPICE des étages de puissance et de détection.</li>
+          <li>Rédaction d'une <strong>matrice de conformité</strong> par rapport au cahier des charges.</li>
+        </ul>
+      </section>
+
+      <section class="evidence-block" data-project="indus">
+        <h3>Projet : Informatique Industrielle</h3>
+        <ul class="muted">
+          <li>Validation de la couche logicielle par tests unitaires de réception série.</li>
+          <li>Ajustement des paramètres d'asservissement en fonction des essais réels.</li>
+        </ul>
+      </section>
+    </article>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">Dionísio Hebo — Portfolio Professionnel</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

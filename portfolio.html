@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Dionísio Hebo - Compétences en Électronique et Systèmes Embarqués.">
+    <title>Compétences en action - Dionísio Hebo</title>
+    <link rel="stylesheet" type="text/css" href="theme.css"> 
+    <link rel="stylesheet" type="text/css" href="style-portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+            <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+            <div class="nav-links" data-nav>
+                <a href="index.html">Accueil</a>
+                <a href="about-me.html">Profil</a>
+                <a class="active" href="portfolio.html">Compétences GEII</a>
+                <a href="angola.html">Angola</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="button-outline" data-theme-toggle type="button" style="padding: 10px 14px;">🌙 Mode sombre</button>
+        </nav>
+    </header>
+
+    <main class="section">
+        <div class="container surface page-hero hero-circuit">
+            <span class="eyebrow">Démonstration Technique</span>
+            <h1 style="margin-top:16px;">Compétences en action</h1>
+            <p class="muted" style="margin-top:18px; max-width:75ch;">
+                Cette page fait le pont entre les blocs de compétences du BUT GEII et mes réalisations concrètes. 
+                Cliquech sur les filtres pour voir comment chaque projet valide des savoir-faire spécifiques.
+            </p>
+        </div>
+
+        <div class="container control-deck" style="margin-top:30px;">
+            <div class="filter-panel card" style="padding: 20px;">
+                <p class="panel-title" style="font-weight: 600; margin-bottom: 15px;">Filtrer les preuves par projet :</p>
+                <div class="filter-row" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button class="filter-btn active button" data-filter="all">Tous les projets</button>
+                    <button class="filter-btn button-outline" data-filter="sumo">Robot Sumo</button>
+                    <button class="filter-btn button-outline" data-filter="kart">Kart à Hélice</button>
+                    <button class="filter-btn button-outline" data-filter="cdr">Radiogoniométrie (CDR)</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container competence-stack" style="margin-top:30px; display: grid; gap: 30px;">
+            
+            <section class="competence-block card" data-projects="sumo kart cdr" style="padding: 30px;">
+                <div class="competence-header">
+                    <span class="eyebrow">Compétence : Analyser</span>
+                    <h2 style="margin: 10px 0;">Produire une analyse fonctionnelle</h2>
+                    <p class="muted">Structurer le système en blocs et préciser les fonctions attendues.</p>
+                </div>
+                <div class="evidence-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <article class="evidence-card surface" data-project="sumo" style="padding: 20px; border-left: 4px solid var(--primary-color);">
+                        <span class="tag-tech">Robot Sumo</span>
+                        <h3 style="margin: 10px 0;">Architecture en 4 blocs</h3>
+                        <p class="muted" style="font-size: 0.9rem;">Organisation autour de l'acquisition, traitement, action et énergie.</p>
+                        <a href="project1.html#analyse" class="button-outline" style="margin-top: 15px; display: inline-block; font-size: 0.8rem;">Détails techniques</a>
+                    </article>
+                    <article class="evidence-card surface" data-project="kart" style="padding: 20px; border-left: 4px solid #3498db;">
+                        <span class="tag-tech">Kart à Hélice</span>
+                        <h3 style="margin: 10px 0;">Chaîne fonctionnelle IR</h3>
+                        <p class="muted" style="font-size: 0.9rem;">Définition de la réception, décodage et propulsion Brushless.</p>
+                        <a href="project3.html#analyse" class="button-outline" style="margin-top: 15px; display: inline-block; font-size: 0.8rem;">Détails techniques</a>
+                    </article>
+                    <article class="evidence-card surface" data-project="cdr" style="padding: 20px; border-left: 4px solid #9b59b6;">
+                        <span class="tag-tech">Radiogoniométrie</span>
+                        <h3 style="margin: 10px 0;">Acquisition RF & SDR</h3>
+                        <p class="muted" style="font-size: 0.9rem;">Structuration du traitement de signal avec Antenne HB9CV, Clé RTL-SDR et GNU Radio.</p>
+                        <a href="project4.html#analyse" class="button-outline" style="margin-top: 15px; display: inline-block; font-size: 0.8rem;">Détails techniques</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="competence-block card" data-projects="sumo kart cdr" style="padding: 30px;">
+                <div class="competence-header">
+                    <span class="eyebrow">Compétence : Concevoir</span>
+                    <h2 style="margin: 10px 0;">Concevoir un prototype matériel et logiciel</h2>
+                    <p class="muted">Implémentation concrète sur cartes électroniques, ATmega328P ou Raspberry Pi.</p>
+                </div>
+                <div class="evidence-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <article class="evidence-card surface" data-project="sumo" style="padding: 20px; border-left: 4px solid var(--primary-color);">
+                        <span class="tag-tech">Robot Sumo</span>
+                        <h3 style="margin: 10px 0;">Intégration Arduino</h3>
+                        <p class="muted" style="font-size: 0.9rem;">Acquisition capteurs et stratégie embarquée en temps réel.</p>
+                        <a href="project1.html#prototype" class="button-outline" style="margin-top: 15px; display: inline-block; font-size: 0.8rem;">Détails techniques</a>
+                    </article>
+                    <article class="evidence-card surface" data-project="kart" style="padding: 20px; border-left: 4px solid #3498db;">
+                        <span class="tag-tech">Kart à Hélice</span>
+                        <h3 style="margin: 10px 0;">Intégration Matérielle</h3>
+                        <p class="muted" style="font-size: 0.9rem;">Assemblage de la chaîne de traction (Brushless, ESC) et commande de direction.</p>
+                        <a href="project3.html#choix-techniques" class="button-outline" style="margin-top: 15px; display: inline-block; font-size: 0.8rem;">Détails techniques</a>
+                    </article>
+                    <article class="evidence-card surface" data-project="cdr" style="padding: 20px; border-left: 4px solid #9b59b6;">
+                        <span class="tag-tech">Radiogoniométrie</span>
+                        <h3 style="margin: 10px 0;">Prototype HB9CV</h3>
+                        <p class="muted" style="font-size: 0.9rem;">Fabrication mécanique (aluminium, mètre ruban) et intégration du connecteur SMA.</p>
+                        <a href="project4.html#fabrication" class="button-outline" style="margin-top: 15px; display: inline-block; font-size: 0.8rem;">Détails techniques</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="competence-block card" data-projects="sumo kart cdr" style="padding: 30px;">
+                <div class="competence-header">
+                    <span class="eyebrow">Compétence : Vérifier</span>
+                    <h2 style="margin: 10px 0;">Dérisquer et Valider les solutions</h2>
+                    <p class="muted">Vérification des points sensibles.</p>
+                </div>
+                <div class="evidence-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <article class="evidence-card surface" data-project="sumo" style="padding: 20px; border-left: 4px solid var(--primary-color);">
+                        <span class="tag-tech">Robot Sumo</span>
+                        <h3 style="margin: 10px 0;">Vidéos de validation</h3>
+                        <p class="muted" style="font-size: 0.9rem;">Visualisation des tests de performance.</p>
+                        <a href="project1.html#verification" class="button-outline" style="margin-top: 15px; display: inline-block; font-size: 0.8rem;">Essais & Résultats</a>
+                    </article>
+                    <article class="evidence-card surface" data-project="kart" style="padding: 20px; border-left: 4px solid #3498db;">
+                        <span class="tag-tech">Kart à Hélice</span>
+                        <h3 style="margin: 10px 0;">Plan de validation IR</h3>
+                        <p class="muted" style="font-size: 0.9rem;">Tests de émissions et de réception du protocole NEC.</p>
+                        <a href="project3.html#essais" class="button-outline" style="margin-top: 15px; display: inline-block; font-size: 0.8rem;">Essais & Résultats</a>
+                    </article>
+                    <article class="evidence-card surface" data-project="cdr" style="padding: 20px; border-left: 4px solid #9b59b6;">
+                        <span class="tag-tech">Radiogoniométrie</span>
+                        <h3 style="margin: 10px 0;">Validation Électromagnétique</h3>
+                        <p class="muted" style="font-size: 0.9rem;">Analyse du produit final sur un analyseur de réseau vectoriel (VNA).</p>
+                        <a href="project4.html#verification" class="button-outline" style="margin-top: 15px; display: inline-block; font-size: 0.8rem;">Essais & Résultats</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="competence-block card" data-projects="cdr" style="padding: 30px;">
+                <div class="competence-header">
+                    <span class="eyebrow">Compétence : Implémenter</span>
+                    <h2 style="margin: 10px 0;">Installation et mise en service d'un système</h2>
+                    <p class="muted">Mise en œuvre de subsystèmes intégrés.</p>
+                </div>
+                <div class="evidence-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <article class="evidence-card surface" data-project="cdr" style="padding: 20px; border-left: 4px solid #9b59b6;">
+                        <span class="tag-tech">Radiogoniométrie</span>
+                        <h3 style="margin: 10px 0;">Installation et mise en service</h3>
+                        <p class="muted" style="font-size: 0.9rem;">Ressembler tous les composants pour une intégration réussie. </p>
+                        <a href="project4.html#installation" class="button-outline" style="margin-top: 15px; display: inline-block; font-size: 0.8rem;">Détails techniques</a>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">Dionísio Hebo — Portfolio Professionnel</div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Alternar classe ativa nos botões
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active', 'button');
+                    btn.classList.add('button-outline');
+                });
+                button.classList.add('active', 'button');
+                button.classList.remove('button-outline');
+
+                const filter = button.getAttribute('data-filter');
+                
+                // Filtrar blocos de competência e evidências
+                document.querySelectorAll('.competence-block').forEach(block => {
+                    const blockProjects = block.getAttribute('data-projects');
+                    if (filter === 'all' || blockProjects.includes(filter)) {
+                        block.style.display = 'block';
+                        
+                        // Filtrar cartões individuels dans le bloc
+                        block.querySelectorAll('.evidence-card').forEach(card => {
+                            if (filter === 'all' || card.getAttribute('data-project') === filter) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                    } else {
+                        block.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Analyse technique du Kart à hélice : propulsion brushless et liaison infrarouge.">
+    <title>Kart à Hélice | Projet Technique - Dionísio Hebo</title>
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Ajuste para a imagem principal do topo */
+        .project-visual {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: contain; /* Garante que a foto completa do protótipo apareça sem cortes */
+            border-radius: 12px;
+            margin: 20px 0;
+            background-color: #fcfcfc;
+            display: block;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        /* Style ajusté para as imagens de cada seção técnica */
+        .section-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain; /* Excelente para diagramas e esquemas elétricos, pois evita cortes nas bordas */
+            border-radius: 8px;
+            margin-top: 24px;
+            background-color: #fafafa;
+            border: 1px solid #eaeaea;
+            display: block;
+        }
+
+        .test-photos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 20px; /* Espaço entre as fotos */
+    margin-top: 24px;
+}
+
+.test-photos-grid img {
+    width: 100%;
+    height: auto; /* Deixa a altura automática para respeitar a proporção da foto */
+    aspect-ratio: 16 / 9; /* Força todas as imagens a terem a mesma proporção widescreen */
+    object-fit: contain; /* Garante que a imagem inteira apareça sem cortes, adicionando barras se necessário */
+    background-color: #fafafa; /* Fundo neutro caso a imagem não preencha tudo */
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+}
+
+/* Responsividade para telemóveis: empilhar as fotos em uma coluna */
+@media (max-width: 600px) {
+    .test-photos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+            <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+            <div class="nav-links" data-nav>
+                <a href="index.html">Accueil</a>
+                <a href="about-me.html">Profil</a>
+                <a href="portfolio.html">Compétences GEII</a>
+                <a href="angola.html">Angola</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <button class="button-outline" data-theme-toggle type="button" style="padding: 10px 14px;">🌙 Mode sombre</button>
+        </nav>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <a href="portfolio.html" style="text-decoration: none; font-weight: 600; font-size: 0.9rem; color: #666;">← Retour aux Compétences GEII</a>
+            
+            <div class="surface page-hero" style="margin-top: 20px; padding: 40px;">
+                <span class="eyebrow">Système Embarqué & Motorisation</span>
+                <h1 style="margin-top:16px;">Kart à Hélice Télécommandé</h1>
+                <p class="muted" style="margin-top:16px; max-width:75ch; line-height:1.6;">
+                    Ce projet intègre une chaîne de puissance <strong>Brushless</strong> et une commande sans fil par protocole <strong>Infrarouge (NEC)</strong>. L'objectif est de valider la réactivité du système et la sécurité logicielle en cas de perte de signal.
+                </p>
+                <div class="chip-row" style="margin-top: 20px;">
+                    <span class="tag-tech">Infrarouge NEC</span>
+                    <span class="tag-tech">Moteur Brushless</span>
+                    <span class="tag-tech">Li-Po 3S</span>
+                    <span class="tag-tech">Servomoteur</span>
+                </div>
+            </div>
+
+            <img class="project-visual card" src="assets/projects/kah.jpg" alt="Vue du Kart à Hélice">
+
+            <section id="analyse" class="section-spacing">
+                <h2 class="main-title">Analyse Fonctionnelle</h2>
+                <div class="spec-grid">
+                    <article class="surface" style="padding: 20px;">
+                        <span class="eyebrow">Entrée</span>
+                        <h3>Acquisition IR</h3>
+                        <p class="muted">Réception des ordres via une liaison infrarouge. Décodage des trames pour extraire les consignes de vitesse e de direction.</p>
+                    </article>
+                    <article class="surface" style="padding: 20px;">
+                        <span class="eyebrow">Sortie</span>
+                        <h3>Actionneurs</h3>
+                        <p class="muted">Propulsion par moteur brushless et direction assurée par un servomoteur de précision.</p>
+                    </article>
+                </div>
+                <img src="assets/projects/kah-analyse.png" alt="Schéma d'analyse fonctionnelle du kart" class="section-image">
+            </section>
+
+            <section id="choix-techniques" class="section-spacing" style="margin-top: 40px;">
+                <div class="card" style="padding: 30px;">
+                    <span class="eyebrow">Solutions</span>
+                    <h2>Solutions Techniques</h2>
+                    <p class="muted" style="margin-top: 15px;">
+                        L'exigence Puissance de la part de l'émetteur dit que les trames protocolaires sont emises à l'aide d'un composant d'émission infrarouge. Pour y répondre, nous avons sélectionné un composant d'émission infrarouge de haute quality, assurant une transmission fiable des commandes même dans des conditions de lumière variable.
+                    </p>
+                    <p class="muted" style="margin-top: 15px;">
+                        Le composant choisi est la led infrarouge TSL6200. Cette led a un courant de crête de 200mA pour émettre un signal infrarouge puissant.
+                        Comme le MCU choisi ne peut pas fournir directement le courant nécessaire, nous avons choisi d'intégrer un étage amplificateur à l'aide d'un transistor.
+                    </p>
+                    <p class="muted" style="margin-top: 15px;">
+                        Après avoir analysé les spécifications techniques, nous avons déterminé les valeurs de résistances nécessaires pour le bon fonctionnement du circuit d'émission et nous avons constaté qu'un condensateur est aussi necessaire pour garantir une stabilité du signal.  
+                    </p>
+                    <div class="project-footer">
+                        <a class="button" href="assets/docs/KAH_DDC_EQ22.docx.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le DDC</a>
+                    </div>
+                </div>
+                <img src="assets/projects/kah-solution3.png" alt="Solutions techniques et composants du kart" class="section-image">
+            </section>
+
+            <section id="essais" class="section-spacing" style="margin-top: 40px;">
+                <h2 class="main-title">Plan de Validation & Essais</h2>
+                <div class="spec-grid">
+                    <article class="surface" style="padding: 20px;">
+                        <h3>Tests du capteur IR dans le récepteur</h3>
+                        <p class="muted">
+                            Dans cet essai, nous avons vérifié la capacité du récepteur à recevoir correctement les trames infrarouges émises par la télécommande. Nous avons utilisé un oscilloscope pour analyser le signal reçu et confirmer que les données étaient interprétées sans erreurs.
+                        </p>
+                        <p class="muted">
+                            Nous avons également utilisé un générateur de table, la telecommande et le recepteur. À l'aide du genérateur de table, nous avons alimenté le récepteur.
+                        </p>
+                        <p class="muted">
+                            Après avoir confirmé que tous les elements du circuit étaient alimentés correctement, nous avons émis des trames de test depuis la télécommande et observé les réponses du récepteur à l'oscilloscope. Les résultats ont montré une réception stable et précise des commandes, validant ainsi la fiabilité de notre solution d'émission/réception infrarouge.
+                        </p>
+                        <p class="muted">
+                            Quand on étudie le fonctionnement du recepteur infrarouge, nous nous rendons compte que le signal réçu est l'enveloppe de l'inverse du signal émis. 
+                            Après avoir vérifié que le signal émis était conforme au protocole NEC, nous avons confirmé que le signal reçu correspondait à nos attentes, avec une amplitude et une forme d'onde cohérentes avec les spécifications du protocole.
+                        </p>
+                        <div class="project-footer">
+                        <a class="button" href="assets/docs/KAH_DDV_EQUIPE_22.docx.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le DDV</a>
+                    </div>
+                    </article>
+                    
+                    
+                </div>
+
+                <div class="test-photos-grid">
+    <figure class="test-photo-item">
+        <img src="assets/projects/kah-test1.jpg" alt="Test de portée en extérieur">
+        <figcaption class="photo-caption">Carte émettrice</figcaption>
+    </figure>
+
+    <figure class="test-photo-item">
+        <img src="assets/projects/kah-test2.jpg" alt="Mesure du courant moteur">
+        <figcaption class="photo-caption">Partie réceptrice</figcaption>
+    </figure>
+
+    <figure class="test-photo-item">
+        <img src="assets/projects/kah-test3.jpg" alt="Vérification du signal IR à l'oscilloscope">
+        <figcaption class="photo-caption">Générateur de table</figcaption>
+    </figure>
+
+    <figure class="test-photo-item">
+        <img src="assets/projects/kah-test4.jpg" alt="Prototype final en action">
+        <figcaption class="photo-caption">Vérification du signal IR à l'entrée du MCU</figcaption>
+    </figure>
+    <figure class="test-photo-item">
+        <img src="assets/projects/kah-test5.jpg" alt="Prototype final en action">
+        <figcaption class="photo-caption">Signal IR émis</figcaption>
+    </figure>
+    <figure class="test-photo-item">
+        <img src="assets/projects/kah-test6.jpg" alt="Prototype final en action">
+        <figcaption class="photo-caption">Signal IR reçu</figcaption>
+    </figure>
+</div>
+                
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">Dionísio Hebo — Portfolio Professionnel</div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

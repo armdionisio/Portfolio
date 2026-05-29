@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Envoyé | Dionísio Hebo</title>
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+    
+    <meta http-equiv="refresh" content="5;url=portfolio.html">
+    
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: var(--background-color, #f4f4f9);
+            margin: 0;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .success-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 400px;
+        }
+        .success-icon {
+            font-size: 4rem;
+            color: #2ecc71; /* Verde sucesso */
+            margin-bottom: 20px;
+        }
+        .loader {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="success-card">
+        <div class="success-icon">✓</div>
+        <h1 style="margin: 0 0 10px 0; font-size: 1.5rem; color: #333;">Merci !</h1>
+        <p style="color: #666; line-height: 1.5;">Votre message a bien été envoyé. Je vous répondrai dans les plus brefs délais.</p>
+        
+        <div class="loader">
+            <p>Redirection vers le portfolio dans 5 secondes...</p>
+            <a href="portfolio.html" style="color: var(--primary-color); text-decoration: none; font-weight: bold; font-size: 0.85rem;">Cliquez ici si vous n'êtes pas redirigé</a>
+        </div>
+    </div>
+
+</body>
+</html>

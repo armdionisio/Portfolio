@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explorez les Chutes de Kalandula en Angola - Dimensions, histoire et vue panoramique.">
+  <title>Kalandula | Patrimoine Naturel de l'Angola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Estilos específicos para harmonizar a página */
+    .angola-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .angola-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+    .angola-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: var(--primary-color, #333);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .back-link:hover { opacity: 0.7; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+    <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+    <div class="nav-links" data-nav>
+      <a href="index.html">Accueil</a>
+      <a href="about-me.html">Profil</a>
+      <a href="portfolio.html">Compétences GEII</a>
+      <a class="active" href="angola.html">Angola</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="button-outline" data-theme-toggle type="button" style="padding: 10px 14px;">🌙 Mode sombre</button>
+  </nav>
+</header>
+
+<main class="section">
+  <div class="container">
+    <!-- Link de retorno para a Galeria -->
+    <a href="angola.html" class="back-link">← Retour à la galerie Angola</a>
+    
+    <div class="surface page-hero" style="padding: 40px;">
+      <span class="eyebrow">Merveille de la Nature</span>
+      <h1 style="margin-top:16px;">Les Majestueuses Chutes de Kalandula</h1>
+      <p class="muted" style="margin-top:18px; max-width:75ch; line-height:1.7;">
+        Situées sur le cours de la rivière Lucala, dans la province de Malanje, les chutes de Kalandula sont les deuxièmes plus hautes d'Afrique. 
+        Avec une extension de <strong>410 mètres</strong> et une chute de <strong>105 mètres</strong>, elles offrent un spectacle de brume et de puissance unique au monde.
+      </p>
+    </div>
+
+    <div class="angola-grid">
+      <!-- Card 1 -->
+      <article class="angola-card card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Kalandula_Falls_C.jpg/1280px-Kalandula_Falls_C.jpg" alt="Vue d'ensemble des chutes de Kalandula">
+        <div class="angola-body">
+          <span class="eyebrow">Écosystème</span>
+          <h2 style="margin-top:8px;">Puissance et Grandeur</h2>
+          <p class="muted" style="margin-top:12px;">Le débit atteint son apogée entre février et mai. La force de l'eau crée un microclimat humide favorisant une végétation luxuriante tout autour des parois rocheuses.</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="angola-card card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Quedas_de_Kalandula_vistas_do_miradouro.jpg/1024px-Quedas_de_Kalandula_vistas_do_miradouro.jpg" alt="Vue depuis le mirador de Kalandula">
+        <div class="angola-body">
+          <span class="eyebrow">Expérience</span>
+          <h2 style="margin-top:8px;">Le Belvédère</h2>
+          <p class="muted" style="margin-top:12px;">Accessible via Malanje, le point d'observation principal offre une vue panoramique sur les multiples cascades qui composent le fer à cheval de Kalandula.</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="angola-card card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Kalandula_Falls_2.jpg/1024px-Kalandula_Falls_2.jpg" alt="Détail des roches et de l'eau">
+        <div class="angola-body">
+          <span class="eyebrow">Identité</span>
+          <h2 style="margin-top:8px;">Patrimoine National</h2>
+          <p class="muted" style="margin-top:12px;">Autrefois nommées "Chutes du Duc de Bragance", leur nom d'origine Kalandula a été restauré en 1975, symbolisant la réappropriation du patrimoine culturel angolais.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="notice" style="margin-top:30px;">
+      <strong>Note technique :</strong> Les photographies sont utilisées sous licence Creative Commons via Wikimedia Commons. Cette page démontre ma capacité à structurer du contenu thématique de manière claire et immersive.
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">Dionísio Hebo — Portfolio Professionnel</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

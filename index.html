@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Dionísio Hebo - Étudiant en Génie Électrique et Systèmes Embarqués">
+  <title>Dionísio Hebo | Électronique & Systèmes Embarqués</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Pequenos ajustes de utilitário que podem ser movidos para o theme.css */
+    .mt-14 { margin-top: 14px; }
+    .mt-18 { margin-top: 18px; }
+    .max-w-60 { max-width: 60ch; }
+    .p-30 { padding: 30px; }
+    html { scroll-behavior: smooth; }
+    .project-card img {
+        width: 100%;           /* Força a imagem a ocupar toda a largura do cartão */
+        height: 250px;         /* Define uma altura fixa para todos os projetos ficarem alinhados */
+        object-fit: cover;     /* Faz a imagem preencher o espaço sem distorcer (corta as sobras) */
+        display: block;
+        border-top-left-radius: inherit;  /* Mantém os cantos arredondados do cartão */
+        border-top-right-radius: inherit;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a class="brand" href="index.html">
+      <strong>Dionísio Hebo</strong>
+      <span>Électronique & Systèmes Embarqués</span>
+    </a>
+    <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">
+      <span aria-hidden="true">≡</span>
+    </button>
+    <div class="nav-links" data-nav>
+      <a class="active" href="index.html">Accueil</a>
+      <a href="about-me.html">Profil</a>
+      <a href="portfolio.html">Compétences GEII</a>
+      <a href="angola.html">Angola</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="button-outline" data-theme-toggle type="button" style="padding: 10px 14px;">🌙 Mode sombre</button>
+  </nav>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container hero surface">
+      <div class="hero-copy">
+        <span class="eyebrow">Portfolio BUT GEII</span>
+        <div>
+          <h1>Dionísio Hebo</h1>
+          <p class="muted mt-14 max-w-60">
+            Étudiant en Génie Électrique et Informatique Industrielle à l’IUT de Bordeaux. 
+            Spécialisé en <strong>Électronique et Systèmes Embarqués</strong>, je conçois des solutions techniques alliant analyse fonctionnelle, prototypage et validation expérimentale.
+          </p>
+        </div>
+        <div class="chip-row">
+          <span class="chip">Conception électronique</span>
+          <span class="chip">Systèmes embarqués</span>
+          <span class="chip">Programmation C</span>
+          <span class="chip">Validation système</span>
+        </div>
+        <div class="button-row">
+          <a class="button" href="portfolio.html">Voir les Compétences GEII</a>
+          <a class="button-outline" href="assets/docs/cv_dionisio.pdf" target="_blank" rel="noopener noreferrer">Consulter le CV</a>
+        </div>
+      </div>
+      <div class="hero-visual card">
+        <img src="assets/profile_picture.jpg" alt="Illustration technique de Dionísio Hebo">
+        <div class="hero-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <article class="surface p-30">
+        <span class="eyebrow">Positionnement</span>
+        <div class="timeline mt-18">
+          <div class="timeline-item">
+            <div class="tag">01 / Analyser</div>
+            <div>
+              <h3>Analyse fonctionnelle</h3>
+              <p class="muted">Identification des fonctions contraintes et des blocs structurels (Cycle en V).</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="tag">02 / Concevoir</div>
+            <div>
+              <h3>Prototype matériel et logiciel</h3>
+              <p class="muted">Schématique, routage (PCB), développement de firmware et intégration système.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="tag">03 / Vérifier</div>
+            <div>
+              <h3>Validation technique</h3>
+              <p class="muted">Tests unitaires, mesures à l'oscilloscope et conformité aux exigences.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="surface hero-panel">
+        <span class="eyebrow">Méthode</span>
+        <h2 class="mt-14">Une approche structurée</h2>
+        <p class="muted mt-18">
+          Je privilégie la rigueur technique : chaque choix de composant est justifié. L’objectif est d'assurer une cohérence totale entre le besoin client et la réalisation finale.
+        </p>
+        <div class="code-box mt-18">besoin → fonctions → architecture → réalisation → validation</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap;margin-bottom:20px;">
+        <div>
+          <span class="eyebrow">Réalisations</span>
+          <h2 class="mt-14">Projets principaux</h2>
+        </div>
+        <a class="button-outline" href="portfolio.html">Vue complète des Compétences GEII</a>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card card">
+          <img src="assets/projects/sumo.png" alt="Robot Mini-Sumo autonome">
+          <div class="project-body">
+            <h3>Robot Mini-Sumo</h3>
+            <p class="muted">Projet d’équipe : conception complète d'un robot autonome, de la stratégie de combat au routage de la carte de puissance.</p>
+            <div class="chip-row">
+              <span class="chip">ATMEGA328P</span>
+              <span class="chip">Pont en H</span>
+              <span class="chip">Capteurs IR</span>
+            </div>
+            <div class="project-footer">
+              <a class="button" href="project1.html">Détails</a>
+              <a class="button-outline" href="assets/docs/B1_DDC_EQ12_V1.docx.pdf" target="_blank" rel="noopener noreferrer">DDC PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card card">
+          <img src="assets/projects/antenne.jpg" alt="Antenne de Radiogoniométrie HB9CV">
+          <div class="project-body">
+            <h3>Challenge Radiogoniométrie</h3>
+            <p class="muted">Conception et validation d'une antenne directive HB9CV pour la localisation radio sur la bande 144 MHz, couplée à une clé RTL-SDR.</p>
+            <div class="chip-row">
+              <span class="chip">Antenne HB9CV</span>
+              <span class="chip">RTL-SDR</span>
+              <span class="chip">GNU Radio</span>
+            </div>
+            <div class="project-footer">
+              <a class="button" href="project4.html">Détails</a>
+              <a class="button-outline" href="assets/docs/EQ_107_DDC_v2.1-1.pdf" target="_blank" rel="noopener noreferrer">DDC PDF</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container contact-grid">
+      <article class="surface contact-card">
+        <span class="eyebrow">Profil</span>
+        <h2 class="mt-14">Approche de travail</h2>
+        <p class="muted mt-14">
+          Passionné par l'intégration matériel/logiciel, je recherche des défis techniques où la précision et la documentation sont primordiales.
+        </p>
+        <div class="contact-links">
+          <a class="contact-link" href="about-me.html">En savoir plus</a>
+          <a class="contact-link" href="assets/docs/cv_dionisio.pdf" target="_blank" rel="noopener noreferrer">CV PDF</a>
+        </div>
+      </article>
+
+      <article class="surface contact-card">
+        <span class="eyebrow">Ouverture</span>
+        <h2 class="mt-14">Angola : Culture & Nature</h2>
+        <p class="muted mt-14">
+          Découvrez une facette plus personnelle à travers mon pays d'origine : paysages emblématiques et symboles de l'Angola.
+        </p>
+        <div class="contact-links">
+          <a class="contact-link" href="angola.html">Découvrir l'Angola</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+    <span>Dionísio Hebo — Portfolio Professionnel</span>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/dionisio-hebo" target="_blank" rel="noopener" style="margin-left: 15px; text-decoration: none;">LinkedIn</a>
+      <a href="https://github.com/armdionisio" target="_blank" rel="noopener" style="margin-left: 15px; text-decoration: none;">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez l'importance du Rio Kwanza - Source d'énergie et âme de l'Angola.">
+  <title>Rio Kwanza | Énergie et Patrimoine - Dionísio Hebo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Estilos para a seção Rio Kwanza */
+    .angola-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .angola-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+    .angola-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .highlight {
+      color: var(--primary-color, #222);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+    <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+    <div class="nav-links" data-nav>
+      <a href="index.html">Accueil</a>
+      <a href="about-me.html">Profil</a>
+      <a href="portfolio.html">Compétences GEII</a>
+      <a class="active" href="angola.html">Angola</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="button-outline" data-theme-toggle type="button" style="padding: 10px 14px;">🌙 Mode sombre</button>
+  </nav>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="surface page-hero" style="padding: 40px; border-bottom: 4px solid var(--primary-color, #333);">
+      <span class="eyebrow">Symbole & Énergie</span>
+      <h1 style="margin-top:16px;">Le Rio Kwanza : L'Âme de l'Angola</h1>
+      <p class="muted" style="margin-top:18px; max-width:75ch; line-height:1.7;">
+        Le Kwanza est bien plus qu'un simple cours d'eau. Donnant son nom à la monnaie nationale, ce fleuve majestueux traverse le pays sur plus de <span class="highlight">960 km</span>, reliant les plateaux centraux à l'Océan Atlantique. Il est le témoin de l'histoire et le moteur de l'avenir angolais.
+      </p>
+    </div>
+
+    <div class="angola-grid">
+      <!-- Géographie -->
+      <article class="angola-card card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Rio_Kwanza_na_Mumbue.jpg/800px-Rio_Kwanza_na_Mumbue.jpg" alt="Source du Rio Kwanza à Mumbué">
+        <div class="angola-body">
+          <span class="eyebrow">Géographie</span>
+          <h2 style="margin-top:8px;">Le Berceau du Fleuve</h2>
+          <p class="muted" style="margin-top:12px;">Prenant sa source à Mumbué (province de Bié) à 1500m d'altitude, il dessine un arc vital qui irrigue les terres fertiles du centre avant de plonger vers le littoral.</p>
+        </div>
+      </article>
+
+      <!-- Économie/Ingénierie -->
+      <article class="angola-card card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Bridge_over_Kwanza_River.jpg/800px-Bridge_over_Kwanza_River.jpg" alt="Barrage et pont sur le Kwanza">
+        <div class="angola-body">
+          <span class="eyebrow">Ingénierie</span>
+          <h2 style="margin-top:8px;">Puissance Énergétique</h2>
+          <p class="muted" style="margin-top:12px;">Ses eaux alimentent les barrages de <span class="highlight">Capanda</span> et <span class="highlight">Lauca</span>. Ce complexe hydroélectrique est la clé de voûte de l'indépendance énergétique et industrielle de l'Angola.</p>
+        </div>
+      </article>
+
+      <!-- Biodiversité -->
+      <article class="angola-card card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Rio_Cuanza_ao_pôr-do-sol.jpg/800px-Rio_Cuanza_ao_pôr-do-sol.jpg" alt="Coucher de soleil sur le Rio Kwanza">
+        <div class="angola-body">
+          <span class="eyebrow">Écosystème</span>
+          <h2 style="margin-top:8px;">Sanctuaire Naturel</h2>
+          <p class="muted" style="margin-top:12px;">Navigable sur 250 km, son embouchure est un paradis pour la biodiversité, mêlant mangroves et forêts galeries, essentielles à la préservation de la faune locale.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="notice" style="margin-top:30px;">
+      <strong>Note historique :</strong> Historiquement, le Kwanza a servi de voie de pénétration vers l'intérieur du continent. Aujourd'hui, il symbolise le renouveau et la modernité à travers ses infrastructures.
+    </div>
+
+    <div style="margin-top: 30px; display: flex; gap: 15px;">
+      <a class="button" href="angola.html">← Retour à la galerie</a>
+      <a class="button-outline" href="index.html#contact">Me contacter</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">Dionísio Hebo — Portfolio Professionnel</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

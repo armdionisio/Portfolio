@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez l'Angola à travers les paysages emblématiques sélectionnés par Dionísio Hebo.">
+  <title>Angola | Galerie Culturelle - Dionísio Hebo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Ajustes específicos para a galeria */
+    .angola-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .angola-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover; /* Garante que fotos de diferentes proporções fiquem alinhadas */
+      display: block;
+    }
+    .angola-body { padding: 20px; }
+    .notice {
+      padding: 15px;
+      background: rgba(0,0,0,0.03);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      border-left: 4px solid #333;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+    <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+    <div class="nav-links" data-nav>
+      <a href="index.html">Accueil</a>
+      <a href="about-me.html">Profil</a>
+      <a href="portfolio.html">Compétences GEII</a>
+      <a class="active" href="angola.html">Angola</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="button-outline" data-theme-toggle type="button" style="padding: 10px 14px;">🌙 Mode sombre</button>
+  </nav>
+</header>
+
+<main class="section">
+  <div class="container surface page-hero" style="padding: 30px;">
+    <span class="eyebrow">Culture & Racines</span>
+    <h1 style="margin-top:16px;">Quelques images fortes de l’Angola</h1>
+    <p class="muted" style="margin-top:18px; max-width:72ch;">
+      Cette page ajoute une respiration visuelle au portfolio. Elle présente quatre références emblématiques qui illustrent la diversité géographique et l'histoire profonde de mon pays.
+    </p>
+  </div>
+
+  <div class="container angola-grid">
+    
+    <!-- Quedas de Kalandula -->
+    <article class="angola-card card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Kalandula_Falls_C.jpg/800px-Kalandula_Falls_C.jpg" alt="Quedas de Kalandula">
+      <div class="angola-body">
+        <span class="eyebrow">Nature</span>
+        <h2 style="margin-top:8px;">Quedas de Kalandula</h2>
+        <p class="muted" style="margin-top:12px;">Situées dans la province de Malanje, ces chutes comptent parmi les plus imposantes d'Afrique par leur largeur spectaculaire.</p>
+        <div style="margin-top: 15px;">
+          <a class="contact-link" href="https://fr.wikipedia.org/wiki/Chutes_de_Kalandula" target="_blank" rel="noopener">Découvrir →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Pedras Negras -->
+    <article class="angola-card card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Pungo_Andongo.jpg/800px-Pungo_Andongo.jpg" alt="Pedras Negras de Pungo-a-Ndongo">
+      <div class="angola-body">
+        <span class="eyebrow">Géologie & Histoire</span>
+        <h2 style="margin-top:8px;">Pedras Negras</h2>
+        <p class="muted" style="margin-top:12px;">Formations monolithiques chargées de mystères, elles furent le refuge de la célèbre Reine Njinga Mbandi face aux colons.</p>
+        <div style="margin-top: 15px;">
+          <a class="contact-link" href="https://fr.wikipedia.org/wiki/Pungo_Andongo" target="_blank" rel="noopener">Découvrir →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Rio Kwanza -->
+    <article class="angola-card card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Bridge_over_Kwanza_River.jpg/800px-Bridge_over_Kwanza_River.jpg" alt="Rio Kwanza">
+      <div class="angola-body">
+        <span class="eyebrow">Fleuve</span>
+        <h2 style="margin-top:8px;">Rio Kwanza</h2>
+        <p class="muted" style="margin-top:12px;">Fleuve vital pour l'économie (énergie hydraulique) et symbole de l'unité nationale angolaise, reliant les terres à l'Océan.</p>
+        <div style="margin-top: 15px;">
+          <a class="contact-link" href="https://fr.wikipedia.org/wiki/Kwanza_(fleuve)" target="_blank" rel="noopener">Découvrir →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Palanca Negra -->
+    <article class="angola-card card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Giant_Sable_Antelope_%2822018702922%29.jpg/800px-Giant_Sable_Antelope_%2822018702922%29.jpg" alt="Palanca negra gigante">
+      <div class="angola-body">
+        <span class="eyebrow">Symbole</span>
+        <h2 style="margin-top:8px;">Palanca Negra</h2>
+        <p class="muted" style="margin-top:12px;">L'antilope noire géante est une espèce rare, endémique de l'Angola, représentant la grâce et la résilience du peuple.</p>
+        <div style="margin-top: 15px;">
+          <a class="contact-link" href="https://fr.wikipedia.org/wiki/Hippotrague_noir" target="_blank" rel="noopener">Découvrir →</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  
+</main>
+
+<footer class="footer">
+  <div class="container">Dionísio Hebo — Portfolio Professionnel</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

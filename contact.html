@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez Dionísio Hebo pour des projets en électronique, systèmes embarqués ou robotique.">
+    <title>Contact | Dionísio Hebo</title>
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .info-card {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: inherit;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(0,0,0,0.02);
+            transition: 0.3s;
+        }
+        .contact-method:hover {
+            background: rgba(0,0,0,0.05);
+            transform: translateX(5px);
+        }
+        .method-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        textarea { height: 150px; resize: vertical; }
+        
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+            <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+            <div class="nav-links" data-nav>
+                <a href="index.html">Accueil</a>
+                <a href="about-me.html">Profil</a>
+                <a href="portfolio.html">Compétences GEII</a>
+                <a href="angola.html">Angola</a>
+                <a class="active" href="contact.html">Contact</a>
+            </div>
+            <button class="button-outline" data-theme-toggle type="button" style="padding: 10px 14px;">🌙 Mode sombre</button>
+        </nav>
+    </header>
+
+    <main class="section">
+        <div class="container surface page-hero">
+            <span class="eyebrow">Collaboration</span>
+            <h1 style="margin-top:16px;">Travaillons ensemble</h1>
+            <p class="muted" style="margin-top:18px; max-width:75ch;">
+                Que ce soit pour un stage, un projet collaboratif ou une question technique sur mes réalisations en systèmes embarqués, n'hésitez pas à me contacter via le formulaire ou mes réseaux professionnels.
+            </p>
+        </div>
+
+        <div class="container contact-grid">
+            <div class="card info-card">
+                <span class="eyebrow">Coordonnées</span>
+                <h2>Canaux directs</h2>
+                
+                <a href="mailto:dionisiohebo7@gmail.com" class="contact-method">
+                    <span class="method-icon">✉</span>
+                    <div>
+                        <strong>Email</strong><br>
+                        <span class="muted">dionisiohebo7@gmail.com</span>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/dionisio-hebo" target="_blank" class="contact-method">
+                    <span class="method-icon">in</span>
+                    <div>
+                        <strong>LinkedIn</strong><br>
+                        <span class="muted">Dionísio Hebo</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/armdionisio" target="_blank" class="contact-method">
+                    <span class="method-icon"> GitHub</span>
+                    <div>
+                        <strong>GitHub</strong><br>
+                        <span class="muted">armdionisio</span>
+                    </div>
+                </a>
+
+                <div class="contact-method">
+                    <span class="method-icon">📍</span>
+                    <div>
+                        <strong>Localisation</strong><br>
+                        <span class="muted">Bordeaux, France / Luanda, Angola</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card info-card">
+                <span class="eyebrow">Message</span>
+                <h2>Envoyez un message rapide</h2>
+                <form class="contact-form" action="https://formsubmit.co/dionisiohebo7@gmail.com" method="POST">
+                    <input type="text" name="name" placeholder="Votre nom complet" required>
+                    <input type="email" name="email" placeholder="Votre e-mail" required>
+                    <input type="text" name="_subject" placeholder="Sujet du message">
+                    <textarea name="message" placeholder="Détails de votre demande..." required></textarea>
+                    
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <input type="hidden" name="_next" value="https://armdionisio.github.io/merci.html">
+                    
+                    <button type="submit" class="button">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">Dionísio Hebo — Portfolio Professionnel</div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
