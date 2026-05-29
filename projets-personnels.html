@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Deux projets personnels de Dionísio Hebo réalisés en dehors du cadre scolaire.">
+  <title>Projets Personnels | Dionísio Hebo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .section-spacing { margin-top: 26px; }
+    .card-padding { padding: 28px; }
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a class="brand" href="index.html">
+      <strong>Dionísio Hebo</strong>
+      <span>Électronique & Systèmes Embarqués</span>
+    </a>
+    <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+    <div class="nav-links" data-nav>
+      <a href="index.html">Accueil</a>
+      <a href="about-me.html">Profil</a>
+      <a href="portfolio.html">Compétences GEII</a>
+      <a class="active" href="projets-personnels.html">Projets personnels</a>
+      <a href="angola.html">Angola</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="button-outline" data-theme-toggle type="button" style="padding: 10px 14px;">🌙 Mode sombre</button>
+  </nav>
+</header>
+
+<main class="section">
+  <div class="container">
+    <article class="surface page-hero card-padding">
+      <span class="eyebrow">Initiatives hors école</span>
+      <h1 class="mt-14">Mes projets personnels</h1>
+      <p class="muted" style="margin-top: 16px; max-width: 74ch; line-height: 1.6;">
+        En dehors des projets académiques, je développe des réalisations personnelles pour progresser sur des cas réels, tester de nouvelles idées
+        et améliorer ma méthode de conception. Ces projets me permettent de pratiquer en autonomie l'intégration matériel/logiciel.
+      </p>
+      <div class="chip-row" style="margin-top: 18px;">
+        <span class="chip">Autonomie</span>
+        <span class="chip">Prototypage rapide</span>
+        <span class="chip">Amélioration continue</span>
+      </div>
+    </article>
+
+    <section class="section-spacing">
+      <article class="surface card-padding">
+        <span class="eyebrow">Projet personnel 01</span>
+        <h2 class="mt-14">Station météo connectée pour la maison</h2>
+        <p class="muted" style="margin-top: 14px; line-height: 1.65;">
+          J'ai travaillé sur la programmation d'une station météo basée sur microcontrôleur ESP32 afin de suivre en temps réel la température, l'humidité et la qualité de l'air.
+          Le système envoie les données vers une interface web cloud pour visualiser les tendances quotidiennes et recevoir des alertes simples.
+        </p>
+        <div class="details-grid">
+          <div class="surface card-padding">
+            <h3>Objectif</h3>
+            <p class="muted mt-14">Rendre les mesures environnementales accessibles de manière claire pour améliorer le confort intérieur.</p>
+          </div>
+          <div class="surface card-padding">
+            <h3>Compétences mobilisées</h3>
+            <p class="muted mt-14">Capteurs analogiques/numériques, traitement de données, communication Wi-Fi et visualisation web.</p>
+          </div>
+          <div class="surface card-padding">
+            <h3>Résultat</h3>
+            <p class="muted mt-14">Prototype stable, mesures continues et historique exploitable.</p>
+          </div>
+        </div>
+        
+      <div class="button-row" style="margin-top:20px;">
+        <a class="button" href="https://armdionisio.github.io/meteo_impoz/" target="_blank" rel="noopener">Lien vers le site (station actuellement offline)</a>
+      </div>
+        <img src="assets/projects/web-site.png" alt="Schéma d'analyse fonctionnelle" class="section-image">
+      </article>
+    </section>
+
+    <section class="section-spacing">
+      <article class="surface card-padding">
+        <span class="eyebrow">Projet personnel 02</span>
+        <h2 class="mt-14">Système de reconnaissance audio pour assistant vocal sur Linux</h2>
+        <p class="muted" style="margin-top: 14px; line-height: 1.65;">
+          Ce projet consiste à développer un assistant vocal capable de reconnaître des commandes vocales sur un système Linux. Il intègre une interface utilisateur simple et une gestion efficace des requêtes.
+        </p>
+        <div class="details-grid">
+          <div class="surface card-padding">
+            <h3>Objectif</h3>
+            <p class="muted mt-14">Je me suis lancé sur ce projet sans aucun objectif précis.</p>
+          </div>
+          <div class="surface card-padding">
+            <h3>Compétences mobilisées</h3>
+            <p class="muted mt-14">Pour ce projet j'ai utilisé mes compétences en programmation Python et l'exploitation de bibliothèques de traitement d'audio.</p>
+          </div>
+          <div class="surface card-padding">
+            <h3>Résultat</h3>
+            <p class="muted mt-14">Assistant vocal fonctionnel, capable de reconnaître des commandes vocales et de répondre aux requêtes simples de l'utilisateur.
+              Pour l'instant, il est limité à des commandes prédéfinies, mais je prévois d'ajouter des fonctionnalités plus avancées à l'avenir. </p>
+            </p>
+            
+          </div>
+        </div>
+        <div class="button-row" style="margin-top:20px;">
+        <a class="button" href="https://drive.google.com/drive/u/0/folders/1QDtZnu5KL_U50LXA5Ou46wcA8baq5BZ-" target="_blank" rel="noopener">Lien vers une vidéo de démonstration</a>
+      </div>
+      </article>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">Dionísio Hebo — Portfolio Professionnel</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
