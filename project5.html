@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jeu de Rapidité Collaboratif (JRC) : conception et fabrication du module joueur autour d'un ATmega328P, de LED RGB, d'un buzzer et d'une liaison USB-UART.">
+    <title>Jeu de Rapidité Collaboratif (JRC) - Projet</title>
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Styles de layout pour les détails du projet */
+        .detail-layout { display: flex; gap: 30px; align-items: flex-start; }
+
+        .side-list {
+            position: sticky;
+            top: 100px;
+            width: 250px;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .side-list a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .side-list a:hover { color: var(--primary-color); }
+
+        .detail-stack { flex-grow: 1; display: flex; flex-direction: column; gap: 24px; width: 100%; min-width: 0; }
+
+        .detail-section { padding: 30px; }
+
+        .tech-list {
+            list-style: none;
+            margin-top: 16px;
+            padding: 0;
+        }
+
+        .tech-list li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .tech-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .section-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain; /* Évite de couper les schémas et typons */
+            border-radius: 8px;
+            margin-top: 24px;
+            background-color: #fafafa;
+            border: 1px solid #eaeaea;
+            display: block;
+        }
+
+        .chip-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .tag-tech {
+            background: #f0f0f0;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .choice-block { margin-top: 28px; padding-top: 20px; border-top: 1px solid #eaeaea; }
+        .choice-block h3 { margin-bottom: 4px; }
+
+        .table-wrap { overflow-x: auto; margin-top: 20px; }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 8px 12px;
+            border: 1px solid #eaeaea;
+            text-align: left;
+        }
+
+        .data-table th { background: #f5f5f5; }
+
+        .image-pair { display: flex; gap: 20px; margin-top: 24px; }
+        .image-pair .section-image { flex: 1; width: calc(50% - 10px); margin-top: 0; }
+
+        @media (max-width: 768px) {
+            .detail-layout { flex-direction: column; }
+            .side-list { position: static; width: 100%; min-width: 100%; }
+            .image-pair { flex-direction: column; }
+            .image-pair .section-image { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="brand" href="index.html"><strong>Dionísio Hebo</strong><span>Électronique & Systèmes Embarqués</span></a>
+            <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu">≡</button>
+            <div class="nav-links" data-nav>
+                <a href="index.html">Accueil</a>
+                <a href="about-me.html">Profil</a>
+                <a href="portfolio.html">Compétences GEII</a>
+                <a href="projets-personnels.html">Projets personnels</a>
+                <a href="angola.html">Angola</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="button-outline" data-theme-toggle type="button" style="padding: 10px 14px;">🌙 Mode sombre</button>
+        </nav>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <a href="portfolio.html" style="text-decoration: none; font-weight: 600; font-size: 0.9rem; color: #666;">← Retour aux Compétences GEII</a>
+
+            <div class="surface page-hero" style="margin-top: 20px; padding: 40px;">
+                <span class="eyebrow">Électronique embarquée & Conception de carte</span>
+                <h1 style="margin-top:16px;">Jeu de Rapidité Collaboratif (JRC)</h1>
+
+                <p class="muted" style="margin-top:16px; max-width:75ch; line-height: 1.6;">
+                    Pour ce projet, il nous fallait concevoir le <strong>module joueur (MJ)</strong> d'un jeu de rapidité collaboratif : une carte électronique comportant quatre boutons de jeu, quatre LED RGB, une LED d'état, un buzzer et un bouton de réinitialisation, le tout piloté par un microcontrôleur et relié à un ordinateur par USB.
+                </p>
+                <p class="muted" style="margin-top:16px; max-width:75ch; line-height: 1.6;">
+                    Ce projet couvre l'ensemble du cycle de développement d'un produit électronique : de l'analyse du cahier des charges au choix argumenté de chaque composant, puis de la conception du schéma électrique au routage, au perçage et à la fabrication de la carte.
+                </p>
+                <p class="muted" style="margin-top:16px; max-width:75ch; line-height: 1.6;">
+                    Projet réalisé en équipe de trois (P. Dias, K. Thiaw et moi-même) à l'IUT GEII de Bordeaux.
+                </p>
+                <div class="project-footer">
+                    <a class="button" href="assets/docs/JRC-CDC.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le CDC</a>
+                </div>
+                <div class="chip-row">
+                    <span class="tag-tech">ATmega328P</span>
+                    <span class="tag-tech">LED RGB</span>
+                    <span class="tag-tech">USB-UART</span>
+                    <span class="tag-tech">CMS / Refusion</span>
+                    <span class="tag-tech">Conception de PCB</span>
+                </div>
+            </div>
+            <img src="assets/projects/jrc-carte.jpg" alt="Vue d'ensemble de la carte du module joueur JRC" class="section-image">
+
+            <div class="detail-layout" style="margin-top:30px;">
+                <aside class="surface side-list card">
+                    <h4 style="margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; color: #999;">Navigation</h4>
+                    <a href="#analyse">Architecture électronique</a>
+                    <a href="#solutions">Choix techniques</a>
+                    <a href="#fabrication">Fabrication de la carte</a>
+                    <a href="#bilan">Bilan</a>
+                </aside>
+
+                <div class="detail-stack">
+
+                    <section class="detail-section surface" id="analyse">
+                        <span class="eyebrow">Architecture</span>
+                        <h2 style="margin-top:14px;">Architecture électronique</h2>
+                        <p class="muted" style="margin-top:16px;">
+                            Le module joueur se découpe en quatre blocs. Trois d'entre eux suivent le chemin de l'information, de l'appui du joueur jusqu'à l'affichage de la couleur puis au son ; le quatrième alimente les trois autres :
+                        </p>
+                        <ul class="tech-list">
+                            <li><strong>Acquisition :</strong> quatre boutons de jeu à tige pour capuchon, un bouton de réinitialisation à profil bas, et la liaison USB-UART qui reçoit les commandes de l'ordinateur.</li>
+                            <li><strong>Traitement :</strong> un microcontrôleur ATmega328P-AU cadencé à 16 MHz par un quartz externe, qui exécute les algorithmes de jeu, gère le chronométrage et la communication série.</li>
+                            <li><strong>Action :</strong> quatre LED RGB de jeu, une LED d'état verte et un buzzer CMS dont la fréquence est générée par le microcontrôleur.</li>
+                            <li><strong>Énergie :</strong> alimentation directe par le bus USB (5 V ± 10 %).</li>
+                        </ul>
+                        <div class="project-footer">
+                            <a class="button" href="assets/docs/DDC_EQ15_v1_1.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le DDC</a>
+                        </div>
+                        <img src="assets/projects/jrc-synoptique.png" alt="Schéma synoptique de l'architecture électronique du module joueur" class="section-image">
+                    </section>
+
+                    <section class="detail-section surface" id="solutions">
+                        <span class="eyebrow">Conception</span>
+                        <h2 style="margin-top:14px;">Choix techniques justifiés par le cahier des charges</h2>
+                        <p class="muted" style="margin-top:16px;">
+                            Chaque composant a été choisi en fonction des exigences du client, de la liste des composants préférentiels et de la disponibilité chez le fournisseur. Voici les décisions principales.
+                        </p>
+
+                        <div class="choice-block">
+                            <h3>LED de jeu et LED d'état</h3>
+                            <p class="muted" style="margin-top:12px;">
+                                La liste préférentielle ne contenait qu'une seule référence de LED RGB, la <strong>ASMB-MTB0-0B3A2</strong> (anode commune). Elle a été retenue pour les quatre LED de jeu <em>et</em> pour la LED d'état, dont seul le canal vert est utilisé (les deux autres cathodes sont reliées à 5 V pour rester éteintes). Cela évite d'ajouter une référence à la nomenclature.
+                            </p>
+                            <p class="muted" style="margin-top:12px;">
+                                Trois canaux permettent de générer exactement les huit couleurs codées de 0 à 7 dans le CDC : le code est la représentation binaire de l'état des canaux (bit 0 = rouge, bit 1 = vert, bit 2 = bleu).
+                            </p>
+                            <div class="table-wrap">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr><th>Code</th><th>Couleur</th><th>Rouge</th><th>Vert</th><th>Bleu</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>0</td><td>Éteint</td><td>0</td><td>0</td><td>0</td></tr>
+                                        <tr><td>1</td><td>Rouge</td><td>1</td><td>0</td><td>0</td></tr>
+                                        <tr><td>2</td><td>Vert</td><td>0</td><td>1</td><td>0</td></tr>
+                                        <tr><td>3</td><td>Jaune</td><td>1</td><td>1</td><td>0</td></tr>
+                                        <tr><td>4</td><td>Bleu</td><td>0</td><td>0</td><td>1</td></tr>
+                                        <tr><td>5</td><td>Magenta</td><td>1</td><td>0</td><td>1</td></tr>
+                                        <tr><td>6</td><td>Cyan</td><td>0</td><td>1</td><td>1</td></tr>
+                                        <tr><td>7</td><td>Blanc</td><td>1</td><td>1</td><td>1</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="choice-block">
+                            <h3>Buzzer</h3>
+                            <p class="muted" style="margin-top:12px;">
+                                Deux modèles étaient proposés : un buzzer traversant et le <strong>PKMCS0909E4000-R1</strong> en CMS. Aucun n'ayant d'oscillateur interne, la fréquence est générée par le microcontrôleur, ce qui répond à l'exigence de fréquence ajustable. Le modèle CMS a été choisi car c'est le seul compatible avec une soudure à refusion en une seule passe. Sa fréquence de résonance est de 4 kHz, où un niveau sonore minimal de 65 dB est garanti.
+                            </p>
+                        </div>
+
+                        <div class="choice-block">
+                            <h3>Alimentation</h3>
+                            <p class="muted" style="margin-top:12px;">
+                                Le bus USB fournit 5 V ± 10 %, soit 4,5 à 5,5 V, ce qui couvre directement la tension minimale de 4,5 V requise par l'ATmega328P à 16 MHz. Les deux régulateurs préférentiels ont été écartés :
+                            </p>
+                            <ul class="tech-list">
+                                <li><strong>LM1117MPX-50 :</strong> sa tension de décrochage de 1,07 V impose une entrée d'au moins 6,07 V, alors que l'USB ne dépasse pas 5,5 V.</li>
+                                <li><strong>LM1117MPX-33 :</strong> à 3,3 V, le microcontrôleur ne peut pas tenir 16 MHz, ce qui dégraderait le chronométrage et les débits de la liaison série.</li>
+                            </ul>
+                            <p class="muted" style="margin-top:12px;">
+                                L'alimentation directe par VBUS est donc la seule solution conforme : un composant en moins, un coût réduit et aucune chute de tension supplémentaire.
+                            </p>
+                        </div>
+
+                        <div class="choice-block">
+                            <h3>Interface USB-UART</h3>
+                            <p class="muted" style="margin-top:12px;">
+                                Deux circuits ont été comparés : le FT230XS-R et le <strong>CY7C65213-28PVXIT</strong>. Le premier convenait fonctionnellement, mais le fournisseur ne l'annonçait disponible qu'à partir d'avril 2027. Nous avons donc retenu le CY7C65213, qui répond aux mêmes exigences et était disponible immédiatement.
+                            </p>
+                            <img src="assets/projects/jrc-disponibilite.png" alt="Disponibilité fabricant du CY7C65213-28PVXIT" class="section-image">
+                        </div>
+
+                        <div class="choice-block">
+                            <h3>Quartz</h3>
+                            <p class="muted" style="margin-top:12px;">
+                                Le quartz <strong>ABM7-16.000MHZ-D2Y-T</strong> (précision de 50 ppm) a été préféré au résonateur céramique CSTNE16M0V53L000R0, dont la tolérance d'environ ± 0,5 % (5000 ppm) est trop large pour garantir une communication USB stable et fiable.
+                            </p>
+                        </div>
+
+                        <div class="choice-block">
+                            <h3>Boutons</h3>
+                            <p class="muted" style="margin-top:12px;">
+                                Pour les quatre boutons de jeu, le <strong>MCDTS2-4N</strong> a été retenu car sa tige permet de monter un capuchon et facilite les appuis rapides. Le bouton de réinitialisation, lui, doit être à profil bas et sans capuchon afin d'éviter tout déclenchement accidentel en pleine partie.
+                            </p>
+                        </div>
+
+                        <div class="choice-block">
+                            <h3>Microcontrôleur</h3>
+                            <p class="muted" style="margin-top:12px;">
+                                Le module doit s'adapter à plusieurs modes de jeu, acquérir les appuis, les traiter et piloter les actionneurs. Parmi les deux références en stock, le choix s'est appuyé sur une fiche d'aide à la décision (FAD) ; le <strong>ATmega328P-AU</strong> a été retenu.
+                            </p>
+                        </div>
+
+                        <div class="project-footer">
+                            <a class="button" href="assets/docs/DDC_EQ15_v1_1.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le DDC</a>
+                        </div>
+                    </section>
+
+                    <section class="detail-section surface" id="fabrication">
+                        <span class="eyebrow">Réalisation</span>
+                        <h2 style="margin-top:14px;">Fabrication de la carte</h2>
+                        <p class="muted" style="margin-top:16px;">
+                            Le dossier de fabrication (DDF) regroupe tous les documents permettant de produire la carte en série :
+                        </p>
+                        <ul class="tech-list">
+                            <li><strong>Schéma électrique :</strong> organisé en quatre blocs (acquisition, traitement, action, énergie), comme l'architecture.</li>
+                            <li><strong>Nomenclature :</strong> composants référencés chez Farnell, en boîtier 1206 pour les passifs afin de faciliter le montage.</li>
+                            <li><strong>Typons :</strong> faces top et bottom à l'échelle 1, utilisables directement comme masques de gravure.</li>
+                            <li><strong>Plan de perçage :</strong> trous de 0,4 mm, 0,95 mm, 1,2 mm et 2,3 mm, plus quatre trous de 3,2 mm pour la fixation de la carte.</li>
+                            <li><strong>Schéma d'implantation :</strong> position de chaque composant sur la carte.</li>
+                        </ul>
+                        <div class="project-footer">
+                            <a class="button" href="assets/docs/DDF_EQ15_v1_1.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le DDF</a>
+                        </div>
+                        <img src="assets/projects/jrc-schema.png" alt="Schéma électrique de la carte JRC" class="section-image">
+
+                        <div class="image-pair">
+                            <img src="assets/projects/jrc-typon-top.png" alt="Typon top de la carte JRC" class="section-image">
+                            <img src="assets/projects/jrc-typon-bottom.png" alt="Typon bottom de la carte JRC" class="section-image">
+                        </div>
+
+                        <div class="image-pair">
+                            <img src="assets/projects/jrc-implantation.png" alt="Schéma d'implantation de la carte JRC" class="section-image">
+                            <img src="assets/projects/jrc-3d-top.png" alt="Modèle 3D de la face top de la carte JRC" class="section-image">
+                        </div>
+                    </section>
+
+                    <section class="detail-section surface" id="bilan">
+                        <span class="eyebrow">Bilan</span>
+                        <h2 style="margin-top:14px;">Ce que j'ai retenu</h2>
+                        <ul class="tech-list">
+                            <li><strong>Justifier chaque choix :</strong> rattacher chaque composant à une exigence du cahier des charges (tension, fréquence, refusion, coût, disponibilité).</li>
+                            <li><strong>Anticiper les contraintes d'approvisionnement :</strong> un composant parfait sur le papier n'est utile que s'il est disponible dans les délais.</li>
+                            <li><strong>Documenter pour reproduire :</strong> produire un dossier de fabrication complet qui permet au client de lancer une production en série.</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">Dionísio Hebo — Portfolio Professionnel</div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
